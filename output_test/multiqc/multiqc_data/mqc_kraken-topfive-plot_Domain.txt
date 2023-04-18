@@ -1,0 +1,2 @@
+Sample	Bacteria	Eukaryota	Archaea	Viruses	Other	Unclassified
+1_se_SRR12170646_db2	233403.0	110194.0	452.0	81.0	7069.0	1648801.0

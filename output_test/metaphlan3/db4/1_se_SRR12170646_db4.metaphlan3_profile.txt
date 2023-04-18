@@ -1,0 +1,58 @@
+#mpa_v30_CHOCOPhlAn_201901
+#/usr/local/bin/metaphlan --nproc 6 --input_type fastq SRR12170646.fastq.gz --add_viruses --bowtie2out 1_se_SRR12170646_db4.metaphlan3.bowtie2out.txt --bowtie2db metaphlan_databases --biom 1_se_SRR12170646_db4.metaphlan3.biom --output_file 1_se_SRR12170646_db4.metaphlan3_profile.txt
+#SampleID	Metaphlan_Analysis
+#clade_name	NCBI_tax_id	relative_abundance	additional_species
+k__Bacteria	2	72.28164	
+k__Viruses	10239	19.17733	
+k__Eukaryota	2759	8.54103	
+k__Bacteria|p__Actinobacteria	2|201174	67.64525	
+k__Viruses|p__Viruses_unclassified	10239|	19.17733	
+k__Eukaryota|p__Ascomycota	2759|4890	8.54103	
+k__Bacteria|p__Firmicutes	2|1239	4.6364	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria	2|201174|1760	67.64525	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified	10239||	19.17733	
+k__Eukaryota|p__Ascomycota|c__Eurotiomycetes	2759|4890|147545	8.54103	
+k__Bacteria|p__Firmicutes|c__Bacilli	2|1239|91061	4.6364	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Pseudonocardiales	2|201174|1760|85010	54.43095	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales	2|201174|1760|85006	10.21062	
+k__Eukaryota|p__Ascomycota|c__Eurotiomycetes|o__Eurotiales	2759|4890|147545|5042	8.54103	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales	10239|||548681	7.28338	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales	2|1239|91061|1385	4.6364	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Streptosporangiales	2|201174|1760|85012	3.00367	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Pseudonocardiales|f__Pseudonocardiaceae	2|201174|1760|85010|2070	54.43095	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae	2|201174|1760|85006|1268	10.21062	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Caudovirales|f__Siphoviridae	10239|||28883|10699	8.79055	
+k__Eukaryota|p__Ascomycota|c__Eurotiomycetes|o__Eurotiales|f__Aspergillaceae	2759|4890|147545|5042|1131492	8.54103	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales|f__Alloherpesviridae	10239|||548681|548682	5.1885	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae	2|1239|91061|1385|90964	4.6364	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Streptosporangiales|f__Nocardiopsaceae	2|201174|1760|85012|83676	3.00367	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales|f__Herpesviridae	10239|||548681|10292	2.09488	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Pseudonocardiales|f__Pseudonocardiaceae|g__Saccharopolyspora	2|201174|1760|85010|2070|1835	54.15699	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae|g__Kocuria	2|201174|1760|85006|1268|57493	9.57218	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Caudovirales|f__Siphoviridae|g__Siphoviridae_unclassified	10239|||28883|10699|	8.79055	
+k__Eukaryota|p__Ascomycota|c__Eurotiomycetes|o__Eurotiales|f__Aspergillaceae|g__Aspergillus	2759|4890|147545|5042|1131492|5052	8.54103	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales|f__Alloherpesviridae|g__Cyprinivirus	10239|||548681|548682|692606	5.1885	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae|g__Staphylococcus	2|1239|91061|1385|90964|1279	4.6364	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Caudovirales|f__Myoviridae|g__Myoviridae_unclassified	10239|||28883|10662|	3.1034	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Streptosporangiales|f__Nocardiopsaceae|g__Thermobifida	2|201174|1760|85012|83676|83677	2.44044	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales|f__Herpesviridae|g__Mardivirus	10239|||548681|10292|180252	2.09488	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae|g__Micrococcus	2|201174|1760|85006|1268|1269	0.63844	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Streptosporangiales|f__Nocardiopsaceae|g__Nocardiopsis	2|201174|1760|85012|83676|2013	0.56324	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Pseudonocardiales|f__Pseudonocardiaceae|g__Actinoalloteichus	2|201174|1760|85010|2070|65496	0.27397	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Pseudonocardiales|f__Pseudonocardiaceae|g__Saccharopolyspora|s__Saccharopolyspora_rectivirgula	2|201174|1760|85010|2070|1835|28042	54.15699	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae|g__Kocuria|s__Kocuria_polaris	2|201174|1760|85006|1268|57493|136273	6.47948	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Caudovirales|f__Siphoviridae|g__Siphoviridae_unclassified|s__Corynebacterium_phage_P1201	10239|||28883|10699||384848	5.76786	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales|f__Alloherpesviridae|g__Cyprinivirus|s__Cyprinid_herpesvirus_3	10239|||548681|548682|692606|180230	5.1885	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae|g__Staphylococcus|s__Staphylococcus_equorum	2|1239|91061|1385|90964|1279|246432	4.6364	k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae|g__Staphylococcus|s__Staphylococcus_sp_OJ82,k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae|g__Staphylococcus|s__Staphylococcus_sp_AntiMn_1
+k__Eukaryota|p__Ascomycota|c__Eurotiomycetes|o__Eurotiales|f__Aspergillaceae|g__Aspergillus|s__Aspergillus_nidulans	2759|4890|147545|5042|1131492|5052|162425	3.94975	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Caudovirales|f__Myoviridae|g__Myoviridae_unclassified|s__Lactobacillus_phage_phiAQ113	10239|||28883|10662||1206110	3.1034	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae|g__Kocuria|s__Kocuria_rosea	2|201174|1760|85006|1268|57493|1275	3.09271	k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae|g__Kocuria|s__Kocuria_sp_WN036,k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae|g__Kocuria|s__Kocuria_sp_UCD_OTCP
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Caudovirales|f__Siphoviridae|g__Siphoviridae_unclassified|s__Lactococcus_phage_bIL309	10239|||28883|10699||151537	3.02269	
+k__Eukaryota|p__Ascomycota|c__Eurotiomycetes|o__Eurotiales|f__Aspergillaceae|g__Aspergillus|s__Aspergillus_cristatus	2759|4890|147545|5042|1131492|5052|573508	2.80488	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Streptosporangiales|f__Nocardiopsaceae|g__Thermobifida|s__Thermobifida_fusca	2|201174|1760|85012|83676|83677|2021	2.44044	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales|f__Herpesviridae|g__Mardivirus|s__Gallid_alphaherpesvirus_2	10239|||548681|10292|180252|10390	2.09488	
+k__Eukaryota|p__Ascomycota|c__Eurotiomycetes|o__Eurotiales|f__Aspergillaceae|g__Aspergillus|s__Aspergillus_fumigatus	2759|4890|147545|5042|1131492|5052|746128	1.36342	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae|g__Micrococcus|s__Micrococcus_luteus	2|201174|1760|85006|1268|1269|1270	0.63844	k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae|g__Micrococcus|s__Micrococcus_sp_KT16,k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae|g__Micrococcus|s__Micrococcus_sp_KBS0714,k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae|g__Micrococcaceae_unclassified|s__Micrococcaceae_bacterium_JKS001869,k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae|g__Micrococcus|s__Micrococcus_sp_CH3,k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Micrococcales|f__Micrococcaceae|g__Micrococcus|s__Micrococcus_sp_CH7
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Streptosporangiales|f__Nocardiopsaceae|g__Nocardiopsis|s__Nocardiopsis_alba	2|201174|1760|85012|83676|2013|53437	0.56324	
+k__Eukaryota|p__Ascomycota|c__Eurotiomycetes|o__Eurotiales|f__Aspergillaceae|g__Aspergillus|s__Aspergillus_glaucus	2759|4890|147545|5042|1131492|5052|41413	0.42298	
+k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Pseudonocardiales|f__Pseudonocardiaceae|g__Actinoalloteichus|s__Actinoalloteichus_sp_AHMU_CJ021	2|201174|1760|85010|2070|65496|2072503	0.27397	

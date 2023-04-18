@@ -1,0 +1,2 @@
+Sample	Fungi	Metazoa	Heunggongvirae	Shotokuvirae	Bamfordvirae	Other	Unclassified
+1_se_SRR12170646_db2	94410.0	14922.0	63.0	10.0	4.0	241790.0	1648801.0

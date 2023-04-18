@@ -1,0 +1,2 @@
+Sample	Unique Reads	Duplicate Reads
+1_SRR12170646_raw	1932485.0	67515.0

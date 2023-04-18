@@ -1,0 +1,2 @@
+Sample	Other	Unclassified
+1_se_SRR12170646_db2	351199.0	1648801.0
