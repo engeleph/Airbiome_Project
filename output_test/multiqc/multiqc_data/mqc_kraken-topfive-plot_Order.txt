@@ -1,0 +1,2 @@
+Sample	Eurotiales	Micrococcales	Primates	Mycobacteriales	Kitasatosporales	Other	Unclassified
+1_se_SRR12170646_db2	90447.0	43529.0	14922.0	14322.0	14053.0	173926.0	1648801.0

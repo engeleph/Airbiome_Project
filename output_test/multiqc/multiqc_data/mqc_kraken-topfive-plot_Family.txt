@@ -1,0 +1,2 @@
+Sample	Aspergillaceae	Micrococcaceae	Hominidae	Streptomycetaceae	Pseudonocardiaceae	Other	Unclassified
+1_se_SRR12170646_db2	89038.0	18074.0	14922.0	14053.0	11658.0	203454.0	1648801.0

@@ -1,0 +1,2 @@
+Sample	Aspergillus	Homo	Streptomyces	Nocardioides	Pseudomonas	Other	Unclassified
+1_se_SRR12170646_db2	88431.0	14922.0	12826.0	8101.0	6933.0	219986.0	1648801.0

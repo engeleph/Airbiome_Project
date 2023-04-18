@@ -1,0 +1,2 @@
+Sample	Actinomycetota	Ascomycota	Pseudomonadota	Bacillota	Chordata	Other	Unclassified
+1_se_SRR12170646_db2	133682.0	93927.0	57016.0	19900.0	14922.0	31752.0	1648801.0
