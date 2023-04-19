@@ -1,0 +1,57 @@
+sample1
+Exported ace/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory ace
+ace	17.300589040280833
+Exported berger_parker_d/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory berger_parker_d
+berger_parker_d	0.38028169014084506
+Exported brillouin_d/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory brillouin_d
+brillouin_d	1.9799286629492434
+Exported chao1/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory chao1
+chao1	17.0
+Exported chao1_ci/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory chao1_ci
+chao1_ci	(17, 17)
+Exported dominance/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory dominance
+dominance	0.1915294584407856
+Exported doubles/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory doubles
+doubles	3
+Exported enspie/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory enspie
+enspie	5.221128948731226
+Exported esty_ci/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory esty_ci
+esty_ci	(-0.029457522445772415, 0.043542029488025935)
+Exported fisher_alpha/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory fisher_alpha
+fisher_alpha	5.039408203770045
+Exported gini_index/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory gini_index
+gini_index	0.6109993293091884
+Exported goods_coverage/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory goods_coverage
+goods_coverage	0.9929577464788732
+Exported heip_e/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory heip_e
+heip_e	0.47963661716419836
+Exported kempton_taylor_q/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory kempton_taylor_q
+kempton_taylor_q	9.822210011435622
+Exported lladser_pe/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory lladser_pe
+lladser_pe	0.09418815494385537
+Exported margalef/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory margalef
+margalef	3.22852266917974
+Exported mcintosh_d/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory mcintosh_d
+mcintosh_d	0.61387440904667
+Exported mcintosh_e/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory mcintosh_e
+mcintosh_e	0.49296587471857534
+Exported menhinick/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory menhinick
+menhinick	1.4266083091043715
+Exported michaelis_menten_fit/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory michaelis_menten_fit
+michaelis_menten_fit	20.90999030189523
+Exported osd/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory osd
+osd	(17, 1, 3)
+Exported pielou_e/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory pielou_e
+pielou_e	0.7468406607354126
+Exported robbins/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory robbins
+robbins	0.007042253521126761
+Exported shannon/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory shannon
+shannon	3.280361246187754
+Exported simpson/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory simpson
+simpson	0.8084705415592144
+Exported simpson_e/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory simpson_e
+simpson_e	0.3071252322783074
+Exported singles/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory singles
+singles	1
+Exported strong/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory strong
+strong	0.47141673570836784

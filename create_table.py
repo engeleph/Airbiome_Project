@@ -9,7 +9,7 @@ parser.add_argument("--sample", required=True, help="Path to input directory con
 args = parser.parse_args()
 sample=args.sample
 
-os.chdir("/home/philipp/Documents/Airbiome_Project/nxf-kraken2")
+#os.chdir("/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project")
 
 df=pd.read_csv('sample.txt', sep='\t', header=0)
 

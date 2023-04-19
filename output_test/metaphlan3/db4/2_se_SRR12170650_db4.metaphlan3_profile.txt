@@ -1,0 +1,11 @@
+#mpa_v30_CHOCOPhlAn_201901
+#/usr/local/bin/metaphlan --nproc 6 --input_type fastq SRR12170650.fastq.gz --add_viruses --bowtie2out 2_se_SRR12170650_db4.metaphlan3.bowtie2out.txt --bowtie2db metaphlan_databases --biom 2_se_SRR12170650_db4.metaphlan3.biom --output_file 2_se_SRR12170650_db4.metaphlan3_profile.txt
+#SampleID	Metaphlan_Analysis
+#clade_name	NCBI_tax_id	relative_abundance	additional_species
+k__Viruses	10239	100.0	
+k__Viruses|p__Viruses_unclassified	10239|	100.0	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified	10239||	100.0	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Viruses_unclassified	10239|||	100.0	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Viruses_unclassified|f__Baculoviridae	10239||||10442	100.0	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Viruses_unclassified|f__Baculoviridae|g__Alphabaculovirus	10239||||10442|558016	100.0	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Viruses_unclassified|f__Baculoviridae|g__Alphabaculovirus|s__Agrotis_segetum_nucleopolyhedrovirus_A	10239||||10442|558016|1962501	100.0	

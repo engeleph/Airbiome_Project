@@ -1,0 +1,85 @@
+sample1
+Saved SampleData[AlphaDiversity] to: ace/alpha_diversity.qza
+Exported ace/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory ace
+ace	17.300589040280833
+Saved SampleData[AlphaDiversity] to: berger_parker_d/alpha_diversity.qza
+Exported berger_parker_d/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory berger_parker_d
+berger_parker_d	0.38028169014084506
+Saved SampleData[AlphaDiversity] to: brillouin_d/alpha_diversity.qza
+Exported brillouin_d/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory brillouin_d
+brillouin_d	1.9799286629492434
+Saved SampleData[AlphaDiversity] to: chao1/alpha_diversity.qza
+Exported chao1/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory chao1
+chao1	17.0
+Saved SampleData[AlphaDiversity] to: chao1_ci/alpha_diversity.qza
+Exported chao1_ci/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory chao1_ci
+chao1_ci	(17, 17)
+Saved SampleData[AlphaDiversity] to: dominance/alpha_diversity.qza
+Exported dominance/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory dominance
+dominance	0.1915294584407856
+Saved SampleData[AlphaDiversity] to: doubles/alpha_diversity.qza
+Exported doubles/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory doubles
+doubles	3
+Saved SampleData[AlphaDiversity] to: enspie/alpha_diversity.qza
+Exported enspie/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory enspie
+enspie	5.221128948731226
+Saved SampleData[AlphaDiversity] to: esty_ci/alpha_diversity.qza
+Exported esty_ci/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory esty_ci
+esty_ci	(-0.029457522445772415, 0.043542029488025935)
+Saved SampleData[AlphaDiversity] to: fisher_alpha/alpha_diversity.qza
+Exported fisher_alpha/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory fisher_alpha
+fisher_alpha	5.039408203770045
+Saved SampleData[AlphaDiversity] to: gini_index/alpha_diversity.qza
+Exported gini_index/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory gini_index
+gini_index	0.6109993293091884
+Saved SampleData[AlphaDiversity] to: goods_coverage/alpha_diversity.qza
+Exported goods_coverage/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory goods_coverage
+goods_coverage	0.9929577464788732
+Saved SampleData[AlphaDiversity] to: heip_e/alpha_diversity.qza
+Exported heip_e/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory heip_e
+heip_e	0.47963661716419836
+Saved SampleData[AlphaDiversity] to: kempton_taylor_q/alpha_diversity.qza
+Exported kempton_taylor_q/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory kempton_taylor_q
+kempton_taylor_q	9.822210011435622
+Saved SampleData[AlphaDiversity] to: lladser_pe/alpha_diversity.qza
+Exported lladser_pe/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory lladser_pe
+lladser_pe	0.09238586464115892
+Saved SampleData[AlphaDiversity] to: margalef/alpha_diversity.qza
+Exported margalef/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory margalef
+margalef	3.22852266917974
+Saved SampleData[AlphaDiversity] to: mcintosh_d/alpha_diversity.qza
+Exported mcintosh_d/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory mcintosh_d
+mcintosh_d	0.61387440904667
+Saved SampleData[AlphaDiversity] to: mcintosh_e/alpha_diversity.qza
+Exported mcintosh_e/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory mcintosh_e
+mcintosh_e	0.49296587471857534
+Saved SampleData[AlphaDiversity] to: menhinick/alpha_diversity.qza
+Exported menhinick/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory menhinick
+menhinick	1.4266083091043715
+Saved SampleData[AlphaDiversity] to: michaelis_menten_fit/alpha_diversity.qza
+Exported michaelis_menten_fit/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory michaelis_menten_fit
+michaelis_menten_fit	20.814626202306485
+Saved SampleData[AlphaDiversity] to: osd/alpha_diversity.qza
+Exported osd/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory osd
+osd	(17, 1, 3)
+Saved SampleData[AlphaDiversity] to: pielou_e/alpha_diversity.qza
+Exported pielou_e/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory pielou_e
+pielou_e	0.7468406607354126
+Saved SampleData[AlphaDiversity] to: robbins/alpha_diversity.qza
+Exported robbins/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory robbins
+robbins	0.007042253521126761
+Saved SampleData[AlphaDiversity] to: shannon/alpha_diversity.qza
+Exported shannon/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory shannon
+shannon	3.280361246187754
+Saved SampleData[AlphaDiversity] to: simpson/alpha_diversity.qza
+Exported simpson/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory simpson
+simpson	0.8084705415592144
+Saved SampleData[AlphaDiversity] to: simpson_e/alpha_diversity.qza
+Exported simpson_e/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory simpson_e
+simpson_e	0.3071252322783074
+Saved SampleData[AlphaDiversity] to: singles/alpha_diversity.qza
+Exported singles/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory singles
+singles	1
+Saved SampleData[AlphaDiversity] to: strong/alpha_diversity.qza
+Exported strong/alpha_diversity.qza as AlphaDiversityDirectoryFormat to directory strong
+strong	0.47141673570836784
