@@ -16,10 +16,10 @@ It does then a taxonomic classification with kraken2 and/or MetaPhlAn3. It uses 
 For every step it can be chosen wheter it is made. For more detailed information, please click [here](https://nf-co.re/taxprofiler/1.0.0). \
 Databeses necessary for kraken2 or metaphlan3 should be downloaded [here](https://benlangmead.github.io/aws-indexes/k2) or with the following command, respectively: \
 
-'''
-wget https://zenodo.org/record/4629921/files/metaphlan_databases.tar.gz
+´´´
+wget https://zenodo.org/record/4629921/files/metaphlan_databases.tar.gz \
 tar -xzf metaphlan_databases.tar.gz
-'''
+´´´
 
 In order to do a txonomic profiling with kraken2 and metaphlan3 and produce krona plots
 
