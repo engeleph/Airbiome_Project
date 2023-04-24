@@ -1,6 +1,6 @@
 #!/bin/bash
 # this script uses metaphlan3 output to create counting table on species level
-datadir=/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project
+datadir="$PWD"
 otu="OTU"
 #create first column with OTU names
 dir=${datadir}/output_test/metaphlan3/db4
