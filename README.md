@@ -21,13 +21,13 @@ wget https://zenodo.org/record/4629921/files/metaphlan_databases.tar.gz
 tar -xzf metaphlan_databases.tar.gz
 ```
 
-Before you can start using taxoprofiler change sample.csv and database.csv. \
+Before you can start using taxoprofiler change sample.csv and database.csv. 
 In order to do a txonomic profiling with kraken2 and metaphlan3 and produce krona plots, run the following command:
 
 ```
 NXF_VER=22.10.1 nextflow run nf-core/taxprofiler --input sample.csv --databases database.csv --outdir output_test -profile docker --run_metaphlan3 --run_kraken2 --run_krona --max_memory '24 GB' --max_cpus 6
 ```
 
-Tip: You do not have to type NXF_VER=22.10.1 if your nextflow version is between 20.10 and 22.10 \
+Tip: You do not have to type NXF_VER=22.10.1 if your nextflow version is between 20.10 and 22.10 
 
-Bla
+
