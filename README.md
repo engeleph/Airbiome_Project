@@ -3,7 +3,7 @@ This reposatory contains the bioinformatics tools to analyse the Airbiome in Med
 The used workflows are using either nextflow[1] with containers (Singularity, Docker,..) to ensure reproducibility.
 It also contains bash and pyton scripts which do not need more than a few preinstalled packages to run.
 ## requisatory softwares for whole project
--Python3  \
+-Python3 with packages numpy and pandas \
 -Nextflow version >= 20.10 but <=  22.10 \
 -Java v11+ \
 -Singularity, Docker, Podman, Shifter or Charliecloud 
