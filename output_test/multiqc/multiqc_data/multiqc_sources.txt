@@ -1,7 +1,0 @@
-Module	Section	Sample Name	Source
-FastQC / Falco (pre-Trimming)	all_sections	1_SRR12170646_raw	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/06/07a3458431808397159e45da5cd731/5/1_SRR12170646_raw_fastqc.zip
-FastQC / Falco (pre-Trimming)	all_sections	3_SRR12170651_raw	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/06/07a3458431808397159e45da5cd731/3/3_SRR12170651_raw_fastqc.zip
-FastQC / Falco (pre-Trimming)	all_sections	2_SRR12170650_raw	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/06/07a3458431808397159e45da5cd731/4/2_SRR12170650_raw_fastqc.zip
-Kraken	all_sections	2_se_SRR12170650_db2	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/06/07a3458431808397159e45da5cd731/8/2_se_SRR12170650_db2.kraken2.kraken2.report.txt
-Kraken	all_sections	1_se_SRR12170646_db2	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/06/07a3458431808397159e45da5cd731/6/1_se_SRR12170646_db2.kraken2.kraken2.report.txt
-Kraken	all_sections	3_se_SRR12170651_db2	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/06/07a3458431808397159e45da5cd731/7/3_se_SRR12170651_db2.kraken2.kraken2.report.txt

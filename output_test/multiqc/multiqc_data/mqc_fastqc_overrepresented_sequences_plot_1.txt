@@ -1,4 +1,0 @@
-Sample	Top over-represented sequence	Sum of remaining over-represented sequences
-1_SRR12170646_raw	1.3381	0.6011
-2_SRR12170650_raw	0.0	0.0
-3_SRR12170651_raw	0.0	0.0

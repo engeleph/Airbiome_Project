@@ -1,4 +1,0 @@
-Sample	Actinomycetes	Eurotiomycetes	Alphaproteobacteria	Gammaproteobacteria	Bacilli	Other	Unclassified
-1_se_SRR12170646_db2	130466.0	90447.0	25470.0	19662.0	18119.0	67035.0	1648801.0
-2_se_SRR12170650_db2	3601.0	761.0	1458.0	863.0	836.0	27659.0	1964822.0
-3_se_SRR12170651_db2	7916.0	782.0	3723.0	1550.0	799.0	37507.0	1947723.0
