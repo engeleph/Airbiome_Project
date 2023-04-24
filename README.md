@@ -1,6 +1,6 @@
 # Airbiome_Project
 This reposatory contains the bioinformatics tools to analyse the Airbiome in Medellín.
-The used workflows are using either nextflow[1] with containers (Singularity, Docker,..) to ensure reproducibility.
+The used workflows are using either [nextflow](https://www.nextflow.io/) with containers (Singularity, Docker,..) to ensure reproducibility.
 It also contains bash and pyton scripts which do not need more than a few preinstalled packages to run.
 ## requisatory softwares for whole project
 -Python3 with packages numpy and pandas \
@@ -8,7 +8,7 @@ It also contains bash and pyton scripts which do not need more than a few preins
 -Java v11+ \
 -Singularity, Docker, Podman, Shifter or Charliecloud 
 ## Reads preprocessing and taxonomic profiling 
-This project uses nf-co.re/taxprofiler[2] for the reads preprocessing, taxonomic profiling and krona plots.  
+This project uses [nf-co.re/taxprofiler](https://nf-co.re/taxprofiler/1.0.0) for the reads preprocessing, taxonomic profiling and krona plots.  
 This taxonomic pipeline  uses Nextflow. It can use a variety of different 
 containers such as Singularity, Docker, Podman, Shifter or Charliecloud. As an input it accepts single or 
 paired end fastq or even single end fasta files. The pipeline starts with adapter trimming and filtering. 
