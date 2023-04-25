@@ -57,7 +57,7 @@ Firstly, the script ```create_table.sh``` which creates with help of the script 
 I have not yet figured out how to use the metaphlan3 output, because metaphlan outputs relative abundances and not absolute like kraken2!
 
 ```
-create_table.sh
+bash create_table.sh
 ```
 The abundance table is then used to calculate 3 differnt beta diversity indices: [weighted jaccard distance](https://rpubs.com/lgadar/weighted-jaccard), [bray curtis dissimilarity](https://people.revoledu.com/kardi/tutorial/Similarity/BrayCurtisDistance.html) and [euclidean distance](https://www.engati.com/glossary/euclidean-distance). These indices are calculated using the script ```beta_diversity.py```.
 ```
