@@ -32,7 +32,7 @@ Tip: You do not have to type NXF_VER=22.10.1 if your nextflow version is between
 
 However, there are are a great number of other possibilities, how to use nf-core/taxoprofiler.
 In order to calculate different alpha diversity indices with the metaphlan3 taxonimic profiling output, we run the script ```execute_alpha_div.sh```.
-The script ```execute_alpha_div``` calls ```alpha_div.nf``` which in turn uses qiime2. Of course, you do not have to install qiime because the nextflow pipeline uses a docker image! In order to use the docker image we have to download it with the following command:
+The script ```execute_alpha_div.sh``` calls ```alpha_div.nf``` which in turn uses qiime2. Of course, you do not have to install qiime because the nextflow pipeline uses a docker image! In order to use the docker image we have to download it with the following command:
 
 ```
 docker pull qiime2/core
