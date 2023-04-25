@@ -30,4 +30,21 @@ NXF_VER=22.10.1 nextflow run nf-core/taxprofiler --input sample.csv --databases 
 
 Tip: You do not have to type NXF_VER=22.10.1 if your nextflow version is between 20.10 and 22.10 
 
+However, there are are a great number of other possibilities, how to use nf-core/taxoprofiler.
+In order to calculate different alpha diversity indices with the metaphlan3 taxonimic profiling output, run the following command:
+
+
+```
+bash execute_alpha_div.sh
+
+```
+The script execute_alpha_div calls alpha_div.nf which in turn uses qiime2. Of course, you do not have to install qiime because the nextflow pipeline uses a docker image!
+The alpha diversity output can then be used to plot boxplots and compare between sample. The script alpha_ttest.py uses a pairwise t-test. However, the test can be easily changed in the script. To run the script, type:
+
+
+```
+pyton alpha_ttest.py
+
+```
+Tip: Instead of python you can also use python3.
 
