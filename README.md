@@ -36,7 +36,6 @@ In order to calculate different alpha diversity indices with the metaphlan3 taxo
 
 ```
 bash execute_alpha_div.sh
-
 ```
 The script ```execute_alpha_div``` calls ```alpha_div.nf``` which in turn uses qiime2. Of course, you do not have to install qiime because the nextflow pipeline uses a docker image!
 The alpha diversity output can then be used to plot boxplots and compare between sample. The script ```alpha_ttest.py``` uses a pairwise t-test. However, the test can be easily changed in the script. To run the script, type:
@@ -44,7 +43,6 @@ The alpha diversity output can then be used to plot boxplots and compare between
 
 ```
 pyton alpha_ttest.py
-
 ```
 Tip: Instead of ```python``` you can also use ```python3```.
 
@@ -54,6 +52,8 @@ I have not yet figured out how to use the metaphlan3 output, because metaphlan o
 
 ```
 create_table.sh
-
 ```
-The abundance table is then used to calculate 3 differnt beta diversity indices: [weighted jaccard distance](https://rpubs.com/lgadar/weighted-jaccard), [bray curtis dissimilarity](https://people.revoledu.com/kardi/tutorial/Similarity/BrayCurtisDistance.html) and [euclidean distance](https://www.engati.com/glossary/euclidean-distance).
+The abundance table is then used to calculate 3 differnt beta diversity indices: [weighted jaccard distance](https://rpubs.com/lgadar/weighted-jaccard), [bray curtis dissimilarity](https://people.revoledu.com/kardi/tutorial/Similarity/BrayCurtisDistance.html) and [euclidean distance](https://www.engati.com/glossary/euclidean-distance). These indices are calculated using the script ```beta_diversity.py```.
+```
+python beta_diversity.py
+```
