@@ -46,5 +46,5 @@ The alpha diversity output can then be used to plot boxplots and compare between
 pyton alpha_ttest.py
 
 ```
-Tip: Instead of python you can also use python3.
+Tip: Instead of ***python*** you can also use ```python3```.
 
