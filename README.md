@@ -38,13 +38,22 @@ In order to calculate different alpha diversity indices with the metaphlan3 taxo
 bash execute_alpha_div.sh
 
 ```
-The script execute_alpha_div calls alpha_div.nf which in turn uses qiime2. Of course, you do not have to install qiime because the nextflow pipeline uses a docker image!
-The alpha diversity output can then be used to plot boxplots and compare between sample. The script alpha_ttest.py uses a pairwise t-test. However, the test can be easily changed in the script. To run the script, type:
+The script ```execute_alpha_div``` calls ```alpha_div.nf``` which in turn uses qiime2. Of course, you do not have to install qiime because the nextflow pipeline uses a docker image!
+The alpha diversity output can then be used to plot boxplots and compare between sample. The script ```alpha_ttest.py``` uses a pairwise t-test. However, the test can be easily changed in the script. To run the script, type:
 
 
 ```
 pyton alpha_ttest.py
 
 ```
-Tip: Instead of ***python*** you can also use ```python3```.
+Tip: Instead of ```python``` you can also use ```python3```.
 
+Another important diversity indicator for microbiomic samples is the beta diversity. For this, we need to execute 2 scripts.
+Firstly, the script ```create_table.sh``` which creates with help of the script ```create_table.py``` a counting table out of the kraken2 outputs.
+I have not yet figured out how to use the metaphlan3 output, because metaphlan outputs relative abundances and not absolute like kraken2!
+
+```
+create_table.sh
+
+```
+The abundance table is then used to calculate 3 differnt beta diversity indices: [weighted jaccard distance](https://rpubs.com/lgadar/weighted-jaccard), [bray curtis dissimilarity](https://people.revoledu.com/kardi/tutorial/Similarity/BrayCurtisDistance.html) and [euclidean distance](https://www.engati.com/glossary/euclidean-distance).
