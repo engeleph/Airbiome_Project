@@ -3,7 +3,7 @@ This reposatory contains the bioinformatics tools to analyse the Airbiome in Med
 The used workflows are using either [nextflow](https://www.nextflow.io/) with containers (Singularity, Docker,..) to ensure reproducibility.
 It also contains bash and pyton scripts which do not need more than a few preinstalled packages to run.
 ## Requirements
--Python3 with packages numpy and pandas \
+-Python3 \
 -Nextflow version >= 20.10 but <=  22.10 \
 -Java v11+ \
 -Docker 
@@ -14,6 +14,12 @@ containers such as Singularity, Docker, Podman, Shifter or Charliecloud. As an i
 paired end fastq or even single end fasta files. The pipeline starts with adapter trimming and filtering. 
 It does then a taxonomic classification with kraken2 and/or MetaPhlAn3. It uses then the output to create krona plots. 
 For every step it can be chosen wheter it is made. For more detailed information, please click [here](https://nf-co.re/taxprofiler/1.0.0). \
+Kowever, before we start with the analysis of the metagenomic samles we have to install a few python packages. All the necessay packages can be found in the script ```python_packages.sh```. These packages can be installed manually or simply by running:
+
+```
+bash python_packages.sh
+```
+
 Databeses necessary for kraken2 and metaphlan3 should be downloaded [here](https://benlangmead.github.io/aws-indexes/k2) and with the following command, respectively: 
 
 ```
