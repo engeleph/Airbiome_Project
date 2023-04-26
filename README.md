@@ -50,7 +50,14 @@ Now we can run the script
 ```
 bash execute_alpha_div.sh
 ```
-The alpha diversity output can then be used to plot boxplots and compare between sample. The script ```alpha_ttest.py``` uses a pairwise t-test. However, the test can be easily changed in the script. To run the script, type:
+The script ```shannon_db.sh``` creates for every group CSV files with all the shannon indices of the samples in that group
+
+```
+bash shannon_db.sh
+```
+Tip: Instead of the shannon index you can also use another index (as long as it has been calculated by the last step!)
+
+The alpha diversity csv output can then be used to plot boxplots and compare between sample. The script ```alpha_ttest.py``` uses a pairwise t-test. However, the test can be easily changed in the script. To run the script, type:
 
 
 ```
