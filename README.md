@@ -61,9 +61,8 @@ The alpha diversity csv output can then be used to plot boxplots and compare bet
 
 
 ```
-pyton alpha_ttest.py
+pyton3 alpha_ttest.py
 ```
-Tip: Instead of ```python``` you can also use ```python3```.
 
 Another important diversity indicator for microbiomic samples is the beta diversity. For this, we need to execute 2 scripts.
 Firstly, the script ```create_table.sh``` which creates with help of the script ```create_table.py``` a counting table out of the kraken2 outputs.
