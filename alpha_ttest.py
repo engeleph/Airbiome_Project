@@ -8,8 +8,10 @@ from statannot import add_stat_annotation
 import os
 
 #this part calculate the number of subdirectories in output_test which is equal to the number of groups
-path="output_test"
-number_groups=len(next(os.walk(path))[1])
+path_input="output_test"
+path_output="output_analysis"
+
+number_groups=len(next(os.walk(path_input))[1])
 
 #the following steps work if you have at least 2 groups, which makes sense for pairwise comparison
 df=pd.read_csv("output_test/group_1/alpha_diversity/alpha_values.csv", sep='\t', header=None)  #first dataframe to start with
@@ -35,9 +37,17 @@ for i in range(1,number_groups):
 x="sample"
 y="shannon"
 
+#create seaborn boxplot with statistics
 ax = sns.boxplot(data=df, x=x, y=y, order=order)
-add_stat_annotation(ax, data=df, x=x, y=y, order=orders, box_pairs=pairs, test='t-test_ind', text_format='star', loc='outside', verbose=2)  #test='Mann-Whitney'
+add_stat_annotation(ax, data=df, x=x, y=y, order=order, box_pairs=pairs, test='t-test_ind', text_format='star', loc='outside', verbose=2)  #test='Mann-Whitney'
 plt.legend(loc='upper left', bbox_to_anchor=(1.03, 1))
 plt.ylabel("Shannon Index")
 
+#checks if output path output_analysis exists and creates it if not
+isExist = os.path.exists(path_output)
+if not isExist:
+   os.makedirs(path_output)
+#change to output directory
+os.chdir(path_output)
+#save plot
 plt.savefig("boxplot.jpg")
