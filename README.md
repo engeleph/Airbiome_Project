@@ -61,7 +61,7 @@ The alpha diversity csv output can then be used to plot boxplots and compare bet
 
 
 ```
-pyton3 alpha_ttest.py
+python3 alpha_ttest.py
 ```
 
 Another important diversity indicator for microbiomic samples is the beta diversity. For this, we need to execute 2 scripts.
