@@ -5,10 +5,8 @@ import numpy as np
 import argparse
 
 parser = argparse.ArgumentParser(description='sample name')
-parser.add_argument("--sample", required=True, help="Sample Name")
 parser.add_argument("--group", required=True, help="Group Number")
 args = parser.parse_args()
-sample=args.sample
 group=args.group
 
 #os.chdir("/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project")

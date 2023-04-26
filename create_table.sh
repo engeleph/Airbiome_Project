@@ -23,10 +23,11 @@ do
 	do
 		sample=$(basename ${filename})
 		sample=${sample%_db2.kraken2.kraken2.report.txt}
+		sample=${sample##*se_}
 		echo "Adding sample ${sample} to counting table of group ${i} ... "
         	echo $otu$'\t'${sample}>>sample.txt
         	cat ${filename} | awk '$4 == "S" {print $6,$7,$8 "\t" $2}'>> sample.txt
-       		python create_table.py --sample ${sample} --group ${i}
+       		python create_table.py --group ${i}
         	rm -r sample.txt
 	done
 done
