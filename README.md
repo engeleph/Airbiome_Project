@@ -33,7 +33,7 @@ Before you can start using taxoprofiler change sample_{NUMBER}.csv and database.
 NXF_VER=22.10.1 nextflow run nf-core/taxprofiler --input sample_{NUMBER}.csv --databases database.csv --outdir output_test/group_{NUMBER} -profile docker --run_metaphlan3 --run_kraken2 --run_krona --max_memory '24 GB' --max_cpus 6
 ```
 
-Tip 1: You do not have to type NXF_VER=22.10.1 if your nextflow version is between 20.10 and 22.10
+Tip 1: You do not have to type NXF_VER=22.10.1 if your nextflow version is between 20.10 and 22.10 \
 Tip 2: Next to choosing the right sample_{NUMBER}.csv file you have to choose also the correct output directory!
 
 However, there are are a great number of other possibilities, how to use nf-core/taxoprofiler.
