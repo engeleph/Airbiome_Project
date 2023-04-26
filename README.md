@@ -27,14 +27,14 @@ wget https://zenodo.org/record/4629921/files/metaphlan_databases.tar.gz
 tar -xzf metaphlan_databases.tar.gz
 ```
 
-Before you can start using taxoprofiler change sample.csv and database.csv. 
-In order to do a txonomic profiling with kraken2 and metaphlan3 and produce krona plots, run the following command:
+Before you can start using taxoprofiler change sample_{NUMBER}.csv and database.csv. Every group (month/PM size/ ...) needs an own sample_{NUMBER}.csv table! In order to do a txonomic profiling with kraken2 and metaphlan3 and produce krona plots, run the following command:
 
 ```
-NXF_VER=22.10.1 nextflow run nf-core/taxprofiler --input sample.csv --databases database.csv --outdir output_test -profile docker --run_metaphlan3 --run_kraken2 --run_krona --max_memory '24 GB' --max_cpus 6
+NXF_VER=22.10.1 nextflow run nf-core/taxprofiler --input sample_{NUMBER}.csv --databases database.csv --outdir output_test/group_{NUMBER} -profile docker --run_metaphlan3 --run_kraken2 --run_krona --max_memory '24 GB' --max_cpus 6
 ```
 
-Tip: You do not have to type NXF_VER=22.10.1 if your nextflow version is between 20.10 and 22.10 
+Tip 1: You do not have to type NXF_VER=22.10.1 if your nextflow version is between 20.10 and 22.10
+Tip 2: Next to choosing the right sample_{NUMBER}.csv file you have to choose also the correct output directory!
 
 However, there are are a great number of other possibilities, how to use nf-core/taxoprofiler.
 In order to calculate different alpha diversity indices with the metaphlan3 taxonimic profiling output, we run the script ```execute_alpha_div.sh```.
