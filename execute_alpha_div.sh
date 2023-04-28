@@ -9,8 +9,7 @@ do
 		sampleName=${in%_db4.metaphlan3.biom}
 		sample=${sampleName##*se_}
 		NXF_VER=21.10.6 nextflow run alpha_div.nf --sampleName "$sampleName" --sample "$sample" --basedir "$PWD" --group "$i"  -with-docker qiime2/core
-		cat $file | awk '$1=="shannon" {print $2}' > $PWD/output_test/group_${z}/alpha_diversity/alpha_values.csv
+		
+		cat $PWD/output_test/group_${i}/alpha_diversity/${sample}_alpha_diversity.tsv | awk '$1=="shannon" {print $2}' >> $PWD/output_test/group_${i}/alpha_diversity/alpha_values.csv
 	done
 done
-
-
