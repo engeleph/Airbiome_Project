@@ -9,7 +9,7 @@ import os
 
 #this part calculate the number of subdirectories in output_test which is equal to the number of groups
 path_input="output_test"
-path_output="output_analysis"
+path_output="output_analysis/plots"
 
 number_groups=len(next(os.walk(path_input))[1])
 
@@ -50,4 +50,4 @@ if not isExist:
 #change to output directory
 os.chdir(path_output)
 #save plot
-plt.savefig("boxplot.jpg")
+plt.savefig("boxplot_alpha_diversity.jpg")

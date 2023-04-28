@@ -4,22 +4,34 @@ import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import argparse
 
-#os.chdir("/home/philipp/Documents/Airbiome_Project/nxf-kraken2")
+parser = argparse.ArgumentParser()
+parser.add_argument("--group1", help="Number of group 1")
+parser.add_argument("--group2", help="Number of group 2")
+args = parser.parse_args()
 
-df=pd.read_csv('output_test/beta_diversity/table.txt', sep='\t', index_col=0)            #load df with samples and number of reads per OTU (genus level)
+group1=args.group1
+group2=args.group2
+
+df1=pd.read_csv('output_test/group_{}/beta_diversity/table.txt'.format(group1), sep='\t', index_col=0) #load df with samples and number of reads per OTU (genus level)
+df2=pd.read_csv('output_test/group_{}/beta_diversity/table.txt'.format(group2), sep='\t', index_col=0)
+df=df1.merge(df2, how='outer', on='OTU')
 otu=df.index                                        #create array containg genus names
-#df=df.T                                             #invert df so that the columns are otus and rows are samples
+df = df.fillna(0)                                            #invert df so that the columns are otus and rows are samples
 
-m=len(df.columns)
-df2=pd.DataFrame({'samples':[],'weighted jaccard':[],'Bray Curtis distance':[], 'Euclidean Distance':[]})
+m=len(df1.columns)
+n=len(df2.columns)
+df4=pd.DataFrame({'samples':[],'weighted jaccard':[],'Bray Curtis distance':[], 'Euclidean Distance':[]})
 #colors = []
-for i in range (0,m-1):
-    for j in range (i+1,m):
-        col_name1=df.columns[i]                         #first sample name
-        col_name2=df.columns[j]                         #second sample name        
+for i in range (m):
+    for j in range (n):
+        col_name1=df1.columns[i]                         #first sample name
+        col_name2=df2.columns[j]                #second sample name
+
         col_combined='{}-{}'.format(col_name1,col_name2)    #combine sample names
         samples_df=pd.DataFrame({'x':df[col_name1], 'y':df[col_name2]})
+        
         #union=np.sum(df.loc[df[col_name2]!=0][col_name1]!=0)       #OTUs of samples which have reads in both samples
         #inter=union+np.sum(df.loc[df[col_name2]!=0][col_name1]==0)+np.sum(df.loc[df[col_name1]!=0][col_name2]==0)      #OTUs of samples which have reads in either samples        
         counter_bc=np.sum(abs(samples_df["x"]-samples_df["y"]))
@@ -32,9 +44,17 @@ for i in range (0,m-1):
         jaccard=round(minimum/maximum,5)                 #calculate weighted jaccard index
         jaccard_div=1-jaccard
         df3=pd.DataFrame({'samples':[col_combined],'weighted jaccard':[jaccard_div],'Bray Curtis distance':[bc], 'Euclidean Distance':[eu_d]})    #include combined sample names and their jaccard index
-        df2=df2.append(df3, ignore_index=True)
+        df4=df4.append(df3, ignore_index=True)
 
-df2.to_csv('output_test/beta_diversity/beta_metrices.txt', header=True, sep ='\t')
+path="output_analysis/beta_diversities/betadiversity_groups_{}_{}".format(group1,group2)
+isExist = os.path.exists(path)
+if not isExist:
+   os.makedirs(path)
+#change to output directory
+os.chdir(path)
+
+df4.to_csv('beta_metrices.txt', header=True, sep ='\t')
+
 
 '''
 #os.chdir('/cluster/project/grlab/projects/metasub/results/metasub_rna/results')
