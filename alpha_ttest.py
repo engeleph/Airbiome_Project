@@ -25,6 +25,7 @@ for i in range(1,number_groups):
     df=pd.concat([df,df2])
 df=df.rename({0: 'shannon'}, axis=1)  # rename first column to shannon
 
+
 #creates pairs and order of samples of pairwise ttests
 pairs=[]
 order=[1]
@@ -37,11 +38,16 @@ for i in range(1,number_groups):
 x="sample"
 y="shannon"
 
+print(pairs)
+print(order)
+print(df)
 #create seaborn boxplot with statistics
 ax = sns.boxplot(data=df, x=x, y=y, order=order)
 add_stat_annotation(ax, data=df, x=x, y=y, order=order, box_pairs=pairs, test='t-test_ind', text_format='star', loc='outside', verbose=2)  #test='Mann-Whitney'
 plt.legend(loc='upper left', bbox_to_anchor=(1.03, 1))
 plt.ylabel("Shannon Index")
+plt.axis('tight')
+
 
 #checks if output path output_analysis exists and creates it if not
 isExist = os.path.exists(path_output)
@@ -51,3 +57,4 @@ if not isExist:
 os.chdir(path_output)
 #save plot
 plt.savefig("boxplot_alpha_diversity.jpg")
+
