@@ -50,14 +50,8 @@ Now we can run the script
 ```
 bash execute_alpha_div.sh
 ```
-The script ```shannon_db.sh``` creates for every group CSV files with all the shannon indices of the samples in that group
 
-```
-bash shannon_db.sh
-```
-Tip: Instead of the shannon index you can also use another index (as long as it has been calculated by the last step!)
-
-The alpha diversity csv output can then be used to plot boxplots and compare between sample. The script ```alpha_ttest.py``` uses a pairwise t-test. However, the test can be easily changed in the script. To run the script, type:
+The alpha diversity csv we get also a csv file with the shannon indices as output. Of course, you could use another index. For that, you have to change the scripts ```execute_alpha_div.sh``` and the next script ```alpha_ttest.py```. The latter script can then be used to plot boxplots and compare between sample.```alpha_ttest.py``` uses a pairwise t-test. However, the test can be easily changed in the script. To run the script, type:
 
 
 ```
@@ -71,7 +65,15 @@ I have not yet figured out how to use the metaphlan3 output, because metaphlan o
 ```
 bash create_table.sh
 ```
-The abundance table is then used to calculate 3 differnt beta diversity indices: [weighted jaccard distance](https://rpubs.com/lgadar/weighted-jaccard), [bray curtis dissimilarity](https://people.revoledu.com/kardi/tutorial/Similarity/BrayCurtisDistance.html) and [euclidean distance](https://www.engati.com/glossary/euclidean-distance). These indices are calculated using the script ```beta_diversity.py```.
+The abundance table is then used to calculate 3 differnt beta diversity indices: [weighted jaccard distance](https://rpubs.com/lgadar/weighted-jaccard), [bray curtis dissimilarity](https://people.revoledu.com/kardi/tutorial/Similarity/BrayCurtisDistance.html) and [euclidean distance](https://www.engati.com/glossary/euclidean-distance). These indices are calculated using the script ```execute_beta_div.sh``` which in turn uses ```beta_diversity.py```. It calculates the beta diversity between the samples of each goup but not between samples of the same group!
+Run simply:
+
 ```
-python beta_diversity.py
+bash execute_beta_div.sh
+```
+
+Similarily to ```alpha_ttest.py```, there is a script ```beta_ttest.py``` . This script creates a boxplot and indicates the significance between the beta diversities. Run it by typing:
+
+```
+python3 beta_ttest.py
 ```
