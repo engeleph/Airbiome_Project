@@ -12,34 +12,37 @@ path="output_test"
 number_groups=len(next(os.walk(path))[1])       
 
 #the following steps work if you have at least 2 groupwise comparisons, which makes sense for pairwise comparison
-df=pd.read_csv("output_analysis/beta_diversities/betadiversity_groups_1_2/jaccard_values.csv", sep='\t', header=None)  #first dataframe to start with
-df["sample"]="1_2"    #belongs to group 0
-order=["1_2"]
-x=1            #x is used to calculate total number of pairwise beta diversity
+df=pd.read_csv("output_analysis/beta_diversities/betadiversity_groups_1_2/jaccard_values.csv", sep='\t', header=0)  #first dataframe to start with
+df["group_pair"]="1_2"    #belongs to group 0
+order=[]
+x=0            #x is used to calculate total number of pairwise beta diversity
 #concat all data frames to 1 big cone
-for i in range(2,number_groups):
+for i in range(1,number_groups):
     for j in range((i+1),(number_groups+1)):
-        df2=pd.read_csv("output_analysis/beta_diversities/betadiversity_groups_{}_{}/jaccard_values.csv".format(i,j), sep='\t', header=None)
-        df2["sample"]="{}_{}".format(i,j)
+        df2=pd.read_csv("output_analysis/beta_diversities/betadiversity_groups_{}_{}/jaccard_values.csv".format(i,j), sep='\t', header=0)
+        df2["group_pair"]="{}_{}".format(i,j)
         df=pd.concat([df,df2])
         order.append("{}_{}".format(i,j))
         x=x+1    
 
 #creates pairs and order of samples of pairwise ttests
 pairs=[]
-for i in range(1,x):
-    for j in range((i+1),(x+1)):
+for i in range((x-1)):
+    for j in range((i+1),x):
         element=(order[i],order[j])
         pairs.append(element)
 
-x="sample"
-y="shannon"
+x="group_pair"
+y="jaccard"
+print(pairs)
+print(order)
 
 #create seaborn boxplot with statistics
 ax = sns.boxplot(data=df, x=x, y=y, order=order)
 add_stat_annotation(ax, data=df, x=x, y=y, order=order, box_pairs=pairs, test='t-test_ind', text_format='star', loc='outside', verbose=2)  #test='Mann-Whitney'
 plt.legend(loc='upper left', bbox_to_anchor=(1.03, 1))
-plt.ylabel("Shannon Index")
+plt.ylabel("weighted Jaccard Dissimilarity")
+plt.axis("tight")
 
 #checks if output path output_analysis exists and creates it if not
 path_output="output_analysis/plots"
@@ -50,4 +53,3 @@ if not isExist:
 os.chdir(path_output)
 #save plot
 plt.savefig("boxplot_beta_diversity.jpg")
-

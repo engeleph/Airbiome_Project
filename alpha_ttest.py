@@ -15,13 +15,13 @@ number_groups=len(next(os.walk(path_input))[1])
 
 #the following steps work if you have at least 2 groups, which makes sense for pairwise comparison
 df=pd.read_csv("output_test/group_1/alpha_diversity/alpha_values.csv", sep='\t', header=None)  #first dataframe to start with
-df["sample"]=1    #belongs to group 0
+df["group"]=1    #belongs to group 0
 
 #concat all data frames to 1 big cone
 for i in range(1,number_groups):
     x=i+1
     df2=pd.read_csv("output_test/group_{}/alpha_diversity/alpha_values.csv".format(x), sep='\t', header=None)
-    df2["sample"]=x
+    df2["group"]=x
     df=pd.concat([df,df2])
 df=df.rename({0: 'shannon'}, axis=1)  # rename first column to shannon
 
@@ -35,7 +35,7 @@ for i in range(1,number_groups):
         element=(i,j)
         pairs.append(element)
 
-x="sample"
+x="group"
 y="shannon"
 
 print(pairs)
