@@ -26,6 +26,7 @@ Databeses necessary for kraken2 and metaphlan3 should be downloaded [here](https
 wget https://zenodo.org/record/4629921/files/metaphlan_databases.tar.gz 
 tar -xzf metaphlan_databases.tar.gz
 ```
+Tip: Different versions of metaphlan3 databases can also be downloaded [here](http://cmprod1.cibio.unitn.it/biobakery3/metaphlan_databases/)
 
 Before you can start using taxoprofiler change sample_{NUMBER}.csv and database.csv. Every group (month/PM size/ ...) needs an own sample_{NUMBER}.csv table! In order to do a txonomic profiling with kraken2 and metaphlan3 and produce krona plots, run the following command:
 
