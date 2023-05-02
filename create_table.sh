@@ -5,8 +5,7 @@ count=$(ls $PWD/output_test/ | wc -l)
 otu="OTU"
 
 
-#for i in `seq 1 $count`
-for i in `seq 4 4`
+for i in `seq 1 $count`
 do
 
 	#create first column with OTU names
