@@ -5,7 +5,8 @@ count=$(ls $PWD/output_test/ | wc -l)
 otu="OTU"
 
 
-for i in `seq 1 $count`
+#for i in `seq 1 $count`
+for i in `seq 4 4`
 do
 
 	#create first column with OTU names
@@ -19,14 +20,14 @@ do
 	#cat ${dir}/kraken2/db2/1_se_SRR12170646_db2.kraken2.kraken2.report.txt | awk '$4 == "S" {print $6,$7,$8}' >> ${dir}/beta_diversity/table.txt
 	touch ${dir}/beta_diversity/table.txt
 
-	for filename in ${dir}/kraken2/db2/*report.txt
+	for filename in ${dir}/bracken/db1/*
 	do
 		sample=$(basename ${filename})
-		sample=${sample%_db2.kraken2.kraken2.report.txt}
+		sample=${sample%_db1.bracken.tsv}
 		sample=${sample##*se_}
 		echo "Adding sample ${sample} to counting table of group ${i} ... "
         	echo $otu$'\t'${sample}>>sample.txt
-        	cat ${filename} | awk '$4 == "S" {print $6,$7,$8 "\t" $2}'>> sample.txt
+        	cat ${filename} | awk '$4 == "S" {print $1,$2 "\t" $7}'>> sample.txt
        		python create_table.py --group ${i}
         	rm -r sample.txt
 	done
