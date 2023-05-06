@@ -20,3 +20,6 @@ pip3 install seaborn
 
 #statannot is needed by seaborn to plot significance of the tests
 pip3 install statannot
+
+#necessary for ploting relative abundances
+pip3 install bokeh
