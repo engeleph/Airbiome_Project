@@ -62,7 +62,7 @@ for i in range(0,2):
     x=end
 
 
-output_file("stacked.html")
+output_file("output_analysis/plots/stacked.html")
 
 df2=pd.DataFrame([[0]*df4.shape[1]],columns=df4.columns)
 
