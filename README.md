@@ -7,9 +7,9 @@ It also contains bash and pyton scripts which do not need more than a few preins
 -Nextflow version >= 20.10 but <=  22.10 \
 -Java v11+ \
 -Docker 
-## Reads preprocessing and taxonomic profiling 
+## Documentation
 This project uses [nf-co.re/taxprofiler](https://nf-co.re/taxprofiler/1.0.0) for the reads preprocessing, taxonomic profiling and krona plots.  
-This taxonomic pipeline  uses Nextflow. It can use a variety of different 
+The taxonomic pipeline uses Nextflow. It can use a variety of different 
 containers such as Singularity, Docker, Podman, Shifter or Charliecloud. As an input it accepts single or 
 paired end fastq or even single end fasta files. The pipeline starts with adapter trimming and filtering. 
 It does then a taxonomic classification with kraken2 and/or MetaPhlAn3. It uses then the output to create krona plots. 
