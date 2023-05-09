@@ -48,4 +48,11 @@ In order to run the whole diversity script, type:
 bash calculate_diversities.sh
 ```
 
+The script ```plot_relative_abundance.py``` uses the summarized bracken output to create a plot with the overall (over all groups) most common species. For this it uses the mean over all groups.
+Run this script by typing:
+
+```
+python3 plot_relative_abundance.py
+```
+
 
