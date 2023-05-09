@@ -48,11 +48,16 @@ In order to run the whole diversity script, type:
 bash calculate_diversities.sh
 ```
 
-The script ```plot_relative_abundance.py``` uses the summarized bracken output to create a plot with the overall (over all groups) most common species. For this it uses the mean over all groups.
+The script ```create_relative_abundance.sh``` uses the bracken output to create a table with the relative abundances of species for each group. This table is then used to creat a plot with the overall (over all groups) most common species. For this purpose, the overall mean of the diffennt species is calculated and then ordered. Only the 10 most abundant species are plotted.
 Run this script by typing:
 
 ```
-python3 plot_relative_abundance.py
+bash create_relative_abundance.sh
+```
+What also might be interesting is to search for common pathogens in the different groups. The script ```search_pathogens.py``` does exactly that. The output states if a pathogen is found (TRUE) or not (FALSE). Run it with:
+
+```
+python3 search_pathogens.py
 ```
 
 
