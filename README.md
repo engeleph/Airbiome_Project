@@ -38,43 +38,14 @@ Tip 2: You do not have to type NXF_VER=22.10.1 if your nextflow version is betwe
 Tip 3: Next to choosing the right sample_{NUMBER}.csv file you have to choose also the correct output directory!
 
 However, there are are a great number of other possibilities, how to use nf-core/taxoprofiler.
-In order to calculate different alpha diversity indices with the metaphlan3 taxonimic profiling output, we run the script ```execute_alpha_div.sh```.
-The script ```execute_alpha_div.sh``` calls ```alpha_div.nf``` which in turn uses qiime2. Of course, you do not have to install qiime because the nextflow pipeline uses a docker image! In order to use the docker image we have to download it with the following command:
+The script ```calculate_diversities.sh``` contains several parts and relies on python files in the directory modules.
+Firstly, it creates a counting table per group out of the bracken outputs. Then it creates a file with different alpha diversity indices (shannon and simpson index).
+The shannon indeces are used to create groupwise boxplots and compare them with a pairwise t-test. The alpha diversity index as well as the pairswise test can be changed manually in the script ```modules/alpha_ttest.py```. 
+After that, it calculates the beta diversity of the sample between groups. But not the beta diversity of samples in the same group. From the different,calculated beta diversity indeces, the weighted jaccard dissimilarity is usded to create boxplots and is compared by a pairwise t-test. Again, this can be changed manually in the script ```modules/beta_ttest.py``` .
+In order to run the whole diversity script, type:
 
 ```
-docker pull qiime2/core
+bash calculate_diversities.sh
 ```
 
-Now we can run the script
 
-
-```
-bash execute_alpha_div.sh
-```
-
-The alpha diversity csv we get also a csv file with the shannon indices as output. Of course, you could use another index. For that, you have to change the scripts ```execute_alpha_div.sh``` and the next script ```alpha_ttest.py```. The latter script can then be used to plot boxplots and compare between sample.```alpha_ttest.py``` uses a pairwise t-test. However, the test can be easily changed in the script. To run the script, type:
-
-
-```
-python3 alpha_ttest.py
-```
-
-Another important diversity indicator for microbiomic samples is the beta diversity. For this, we need to execute 2 scripts.
-Firstly, the script ```create_table.sh``` which creates with help of the script ```create_table.py``` a counting table out of the kraken2 outputs.
-I have not yet figured out how to use the metaphlan3 output, because metaphlan outputs relative abundances and not absolute like kraken2!
-
-```
-bash create_table.sh
-```
-The abundance table is then used to calculate 3 differnt beta diversity indices: [weighted jaccard distance](https://rpubs.com/lgadar/weighted-jaccard), [bray curtis dissimilarity](https://people.revoledu.com/kardi/tutorial/Similarity/BrayCurtisDistance.html) and [euclidean distance](https://www.engati.com/glossary/euclidean-distance). These indices are calculated using the script ```execute_beta_div.sh``` which in turn uses ```beta_diversity.py```. It calculates the beta diversity between the samples of each goup but not between samples of the same group!
-Run simply:
-
-```
-bash execute_beta_div.sh
-```
-
-Similarily to ```alpha_ttest.py```, there is a script ```beta_ttest.py``` . This script creates a boxplot and indicates the significance between the beta diversities. Run it by typing:
-
-```
-python3 beta_ttest.py
-```
