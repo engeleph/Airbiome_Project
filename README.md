@@ -38,7 +38,7 @@ Tip 1: You can also create Krona plots (```--run_krona```) or do a txonomic clas
 Tip 2: You do not have to type NXF_VER=22.10.1 if your nextflow version is between 20.10 and 22.10 \
 Tip 3: Next to choosing the right sample_{NUMBER}.csv file you have to choose also the correct output directory!
 
-However, there are are a great number of other possibilities, how to use nf-core/taxoprofiler. \
+However, there are a great number of other possibilities, how to use nf-core/taxoprofiler. \
 The script ```calculate_diversities.sh``` contains several parts and relies on python files in the directory modules.
 Firstly, it creates a counting table per group out of the bracken outputs. Then it creates a file with different alpha diversity indices (shannon and simpson index).
 The shannon indeces are used to create groupwise boxplots and compare them with a pairwise t-test. The alpha diversity index as well as the pairswise test can be changed manually in the script ```modules/alpha_ttest.py```. 
