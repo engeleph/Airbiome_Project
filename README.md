@@ -7,7 +7,7 @@ It also contains bash and pyton scripts which do not need more than a few preins
 -Python v3 \
 -Nextflow version >= 20.10 but <=  22.10 \
 -Java v11+ \
--Docker 
+-Singularity, Docker, Podman, Shifter or Charliecloud
 ## Documentation
 This project uses [nf-co.re/taxprofiler](https://nf-co.re/taxprofiler/1.0.0) for the reads preprocessing, taxonomic profiling and krona plots.  
 The taxonomic pipeline uses Nextflow. It can use a variety of different 
