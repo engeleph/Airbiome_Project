@@ -23,3 +23,7 @@ pip3 install statannot
 
 #necessary for ploting relative abundances
 pip3 install bokeh
+
+#necessary for PCA plot
+python3 -m pip install -U plotly
+pip install -U kaleido
