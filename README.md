@@ -36,7 +36,7 @@ Before you can start using taxoprofiler change sample_{NUMBER}.csv and database.
 ```
 NXF_VER=22.10.1 nextflow run nf-core/taxprofiler --input conf/sample_{NUMBER}.csv --databases conf/database.csv --outdir output_test/group_{NUMBER} -profile docker --run_kraken2 --run_bracken --max_memory '24 GB' --max_cpus 6
 ```
-Tip 1: You can also create Krona plots (```--run_krona```) or do a taxonomic classification with metaphlan3 (```--run_metaphlan3```). \
+Tip 1: You can also create Krona plots (```--run_krona```) or do a taxonomic classification with metaphlan3 (```--run_metaphlan3```). \sklearn
 Tip 2: You do not have to type NXF_VER=22.10.1 if your nextflow version is between 20.10 and 22.10 \
 Tip 3: Next to choosing the right sample_{NUMBER}.csv file you have to choose also the correct output directory!
 
@@ -62,4 +62,11 @@ What also might be interesting is to search for common pathogens in the differen
 
 ```
 python3 search_pathogens.py
+```
+
+The script ```calculate_CA.sh``` is helping to analyze the taxonimic data a bit more. Firstly, it creates a counting table over all samples of all groups. This counting table is the used to first claclulate and plot the first two PC and color the data points by group. Then, it also calculates a CCA and uses a second table with the independent variables. The name of this tables has to be adjusted in the script ```modules/CCA.py```.
+In order to run the whole pipeline, type:
+
+```
+bash calculate_CA.sh
 ```
