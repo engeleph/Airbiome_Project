@@ -33,6 +33,14 @@ done
 
 echo "Counting table created!"
 
+echo "Filter step"
+
+python3 modules/filtering_table.py
+
+echo "Normalize OTU table"
+
+python3 modules/table_transformation.py
+
 #calculate alpha diversities
 echo "Calculate alpha diversites"
 
@@ -43,7 +51,7 @@ echo "Bar plot and pairwise ttest of alpha diversities"
 
 python3 modules/alpha_ttest.py
 
-echo"Calculate beta diverity indices"
+echo "Calculate beta diverity indices"
 
 for i in `seq 1 $((count-1))`
 do

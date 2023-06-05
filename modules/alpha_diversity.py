@@ -5,11 +5,12 @@ import pandas as pd
 import numpy as np
 
 
+
 path_input="output_test"
 number_groups=len(next(os.walk(path_input))[1])
 
 for group in range(1,number_groups):
-    df=pd.read_csv('output_test/group_{}/counting_table/table.txt'.format(group), sep='\t', index_col=0)
+    df=pd.read_csv('output_test/group_{}/counting_table/normalized_table.txt'.format(group), sep='\t', index_col=0)
     
     #calculate shannon diversity
     n=len(df)
