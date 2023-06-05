@@ -10,8 +10,11 @@ from bokeh.io import show, output_file
 from bokeh.models import ColumnDataSource
 from bokeh.plotting import figure
 from bokeh.core.properties import value
-from bokeh.palettes import Spectral
+from bokeh.palettes import Spectral,Plasma
 import itertools
+import sys
+sys.path.append('conf')
+from config import number_otus
 
 
 #this part calculate the number of subdirectories in output_test which is equal to the number of groups
@@ -22,13 +25,13 @@ number_groups=len(next(os.walk(path_input))[1])-1
 
 samples=[]
 #the following steps work if you have at least 2 groups, which makes sense for pairwise comparison
-df=pd.read_csv("output_test/group_1/counting_table/phyla_table.txt", sep='\t', header=0)  #first dataframe to start with
+df=pd.read_csv("output_test/group_1/counting_table/abundance_table.txt", sep='\t', header=0)  #first dataframe to start with
 samples.append((len(df.columns)-1))
 
 #concat all data frames to 1 big cone
 for i in range(1,number_groups):
     x=i+1
-    df2=pd.read_csv("output_test/group_{}/counting_table/phyla_table.txt".format(x), sep='\t', header=0)
+    df2=pd.read_csv("output_test/group_{}/counting_table/abundance_table.txt".format(x), sep='\t', header=0)
     df=df.merge(df2, how='outer', on='Phylum')
     samples.append(len(df2.columns)-1)
 df = df.fillna(0)
@@ -37,7 +40,7 @@ df.reset_index(drop=True, inplace=True)
 df["mean"]=df.mean(axis=1)
 
 df=df.sort_values('mean', ascending=False)
-df=df.head(10)
+df=df.head(number_otus)
 #df=df.iloc[0:10,:]
 
 
@@ -66,7 +69,6 @@ output_file("output_analysis/plots/stacked.html")
 df2=pd.DataFrame([[0]*df4.shape[1]],columns=df4.columns)
 
 
-
 df4.set_index("Phylum", inplace=True)
 samples = df4.columns.values
 organisms = df4.index.values
@@ -79,7 +81,7 @@ df4 = df4.groupby('Phylum')[samples].transform('sum')
 # choose an appropriate pallete from
 # https://docs.bokeh.org/en/latest/docs/reference/palettes.html
 # if you have a large number of organisms
-color_iter = itertools.cycle(Spectral[11])    
+color_iter = itertools.cycle(Plasma[(number_otus+1)])    
 colors = [next(color_iter) for organism in organisms]
 
 # create a ColumnDataSource

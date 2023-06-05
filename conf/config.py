@@ -16,3 +16,6 @@ beta_index="weighted jaccard"   # choose with wich beta diversity index you want
 beta_test="t-test_ind"   #choose which test you want to compare alpha diversities in boxplot, options: [t-test_ind, t-test_welch, t-test_paired, Mann-Whitney, Mann-Whitney-gt, Mann-Whitney-ls, Levene, Wilcoxon, Kruskal]
 
 
+#plot relative abundance
+number_otus=8             #not more than the 10 most abundant OTUs (+ others) can be plot
+
