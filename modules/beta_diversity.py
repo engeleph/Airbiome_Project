@@ -15,8 +15,8 @@ group1=args.group1
 group2=args.group2
 
 
-df1=pd.read_csv('output_test/group_{}/counting_table/table.txt'.format(group1), sep='\t', index_col=0) #load df with samples and number of reads per OTU (genus level)
-df2=pd.read_csv('output_test/group_{}/counting_table/table.txt'.format(group2), sep='\t', index_col=0)
+df1=pd.read_csv('output_test/group_{}/counting_table/normalized_table.txt'.format(group1), sep='\t', index_col=0) #load df with samples and number of reads per OTU (genus level)
+df2=pd.read_csv('output_test/group_{}/counting_table/normalized_table.txt'.format(group2), sep='\t', index_col=0)
 df=df1.merge(df2, how='outer', on='OTU')
 otu=df.index                                        #create array containg genus names
 df = df.fillna(0)                                            #invert df so that the columns are otus and rows are samples
@@ -54,7 +54,7 @@ if not isExist:
 #change to output directory
 os.chdir(path)
 
-df4.to_csv('beta_metrices.txt', header=True, sep ='\t')
+df4.to_csv('beta_metrices.txt', header=True, sep ='\t',index=False)
 
 
 '''
