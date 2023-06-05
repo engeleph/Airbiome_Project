@@ -41,17 +41,15 @@ Tip 2: You do not have to type NXF_VER=22.10.1 if your nextflow version is betwe
 Tip 3: Next to choosing the right sample_{NUMBER}.csv file you have to choose also the correct output directory!
 
 However, there are a great number of other possibilities, how to use nf-core/taxoprofiler. \
-The script ```calculate_diversities.sh``` contains several parts and relies on python files in the directory modules.
-Firstly, it creates a counting table per group out of the bracken outputs. Then, it creates a file with different alpha diversity indices (shannon and simpson index).
-The shannon indeces are used to create groupwise boxplots and compare them with a pairwise t-test. The alpha diversity index as well as the pairswise test can be changed manually in the script ```modules/alpha_ttest.py```. 
-After that, it calculates the beta diversity of the sample between groups. But not the beta diversity of samples in the same group. From the different,calculated beta diversity indeces, the weighted jaccard dissimilarity is usded to create boxplots and is compared by a pairwise t-test. Again, this can be changed manually in the script ```modules/beta_ttest.py``` .
-In order to run the whole diversity script, type:
+The script ```calculate_diversities.sh``` contains several parts and relies on python files in the directory modules. Explanations of possible configurations are further discribed in the configfile ```conf/config.py```.
+Firstly, it creates a counting table per group out of the bracken outputs. Next very low abundant OTUs can be filtered. For this a filter size and filter proportion can be chosen. The filter process can be easily described as all OTUs in one group are set to 0 when the average count is smaller or equal than the filter size and the the proportion of 0's is bigger than the filter proportion. The observed counts for these OTUs are viewed as false positive. To adjust for the potentially enormous differences between very highly abundant and very rare OTUs the OTU table is transformed. For that, the logarithmic transformation (log2(x+1)) is used. Configuration for this two steps can be specified in the config file. After finalizing the OTU table, it creates a file with different alpha diversity indices (shannon and simpson index). The desired alpha diversity index is used to create groupwise boxplots and compares this index between groups with the chosen test. After that, it calculates the beta diversity of the sample between groups. But not the beta diversity of samples in the same group. From the calculated beta diversity indeces, similar as for the alpha diversity, an index and a test can be specified in the config file.
+In order to run the whole diversity pipeline, type:
 
 ```
 bash calculate_diversities.sh
 ```
 
-The script ```create_relative_abundance.sh``` uses the bracken output to create a table with the relative abundances of species for each group. This table is then used to creat a plot with the overall (over all groups) most common species. For this purpose, the overall mean of the diffennt species is calculated and then ordered. Only the 10 most abundant species are plotted.
+The script ```create_relative_abundance.sh``` uses the bracken output to create a table with the relative abundances of species for each group. This table is then used to creat a plot with the overall (over all groups) most common species. For this purpose, the overall mean of the diffennt species is calculated and then ordered. Only the x most abundant species are plotted. X can be chosen again in the config file.
 Run this script by typing:
 
 ```
@@ -64,7 +62,7 @@ What also might be interesting is to search for common pathogens in the differen
 python3 search_pathogens.py
 ```
 
-The script ```calculate_CA.sh``` is helping to analyze the taxonimic data a bit more. Firstly, it creates a counting table over all samples of all groups. This counting table is the used to first claclulate and plot the first two PC and color the data points by group. Then, it also calculates a CCA and uses a second table with the independent variables. The name of this tables has to be adjusted in the script ```modules/CCA.py```.
+The script ```calculate_CA.sh``` is helping to analyze the taxonimic data a bit more. Firstly, it creates a counting table over all samples of all groups. This counting table is the used to first calculate and plot the first two PC and color the data points by group. Then, it also calculates a CCA and uses a second table with the independent variables. The name of this tables has to be adjusted in the script ```modules/CCA.py```.
 In order to run the whole pipeline, type:
 
 ```
