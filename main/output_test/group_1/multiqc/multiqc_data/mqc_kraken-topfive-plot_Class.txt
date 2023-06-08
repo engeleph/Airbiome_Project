@@ -1,0 +1,4 @@
+Sample	Actinomycetes	Eurotiomycetes	Alphaproteobacteria	Gammaproteobacteria	Mammalia	Other	Unclassified
+1_se_SRR12170646_db2	204150.0	133815.0	44140.0	28891.0	18101.0	79009.0	1491894.0
+2_se_SRR12170657_db2	9138.0	1046.0	5612.0	1769.0	8065.0	43545.0	1930825.0
+3_se_SRR12170658_db2	35133.0	1163.0	17880.0	4352.0	5757.0	51120.0	1884595.0

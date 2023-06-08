@@ -1,0 +1,3 @@
+Sample	Actinomycetota	Pseudomonadota	Bacteroidota	Ascomycota	Basidiomycota	Other	Unclassified
+4_se_SRR12170661_db2	129578.0	128713.0	11097.0	11537.0	6599.0	28364.0	1684112.0
+5_se_SRR12170668_db2	172887.0	167629.0	13078.0	7412.0	4252.0	29137.0	1605605.0

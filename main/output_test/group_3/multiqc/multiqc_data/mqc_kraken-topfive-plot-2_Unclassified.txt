@@ -1,0 +1,3 @@
+Sample	Other	Unclassified
+6_se_SRR21153784_db1.bracken	640585.0	7197095.0
+7_se_SRR21154505_db1.bracken	860157.0	7825683.0

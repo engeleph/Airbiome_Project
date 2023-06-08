@@ -1,0 +1,18 @@
+#mpa_v31_CHOCOPhlAn_201901
+#/usr/local/bin/metaphlan --nproc 6 --input_type fastq SRR12170652.fastq.gz --add_viruses --bowtie2out 7_se_SRR12170652_db4.metaphlan3.bowtie2out.txt --bowtie2db metaphlan_databases_new_2 --biom 7_se_SRR12170652_db4.metaphlan3.biom --output_file 7_se_SRR12170652_db4.metaphlan3_profile.txt
+#SampleID	Metaphlan_Analysis
+#clade_name	NCBI_tax_id	relative_abundance	additional_species
+k__Viruses	10239	100.0	
+k__Viruses|p__Viruses_unclassified	10239|	100.0	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified	10239||	100.0	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales	10239|||548681	71.76343	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Caudovirales	10239|||28883	28.23657	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales|f__Alloherpesviridae	10239|||548681|548682	50.71081	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Caudovirales|f__Siphoviridae	10239|||28883|10699	28.23657	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales|f__Herpesviridae	10239|||548681|10292	21.05263	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales|f__Alloherpesviridae|g__Cyprinivirus	10239|||548681|548682|692606	50.71081	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Caudovirales|f__Siphoviridae|g__Siphoviridae_unclassified	10239|||28883|10699|	28.23657	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales|f__Herpesviridae|g__Macavirus	10239|||548681|10292|548687	21.05263	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales|f__Alloherpesviridae|g__Cyprinivirus|s__Cyprinid_herpesvirus_3	10239|||548681|548682|692606|180230	50.71081	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Caudovirales|f__Siphoviridae|g__Siphoviridae_unclassified|s__Enterobacteria_phage_mEp237	10239|||28883|10699||1147151	28.23657	
+k__Viruses|p__Viruses_unclassified|c__Viruses_unclassified|o__Herpesvirales|f__Herpesviridae|g__Macavirus|s__Alcelaphine_gammaherpesvirus_1	10239|||548681|10292|548687|35252	21.05263	

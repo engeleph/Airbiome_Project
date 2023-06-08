@@ -1,0 +1,2 @@
+OTU	SRR12170652
+Saccharomyces cerevisiae	15635

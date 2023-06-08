@@ -1,0 +1,3 @@
+Sample	Homo sapiens	Acinetobacter equi	Acinetobacter sp. NCu2D-2	Cutibacterium acnes	Acinetobacter indicus	Other	Unclassified
+6_se_SRR21153784_db2	57049.0	580.0	2.0	103.0	5.0	582846.0	7197095.0
+7_se_SRR21154505_db2	85271.0	433.0	524.0	350.0	448.0	773131.0	7825683.0

@@ -1,0 +1,3 @@
+Sample	Hominidae	Moraxellaceae	Prevotellaceae	Comamonadaceae	Oscillospiraceae	Other	Unclassified
+6_se_SRR21153784_db1.bracken	57056.0	1193.0	2117.0	108.0	700.0	579411.0	7197095.0
+7_se_SRR21154505_db1.bracken	85330.0	24779.0	1152.0	1585.0	876.0	746435.0	7825683.0

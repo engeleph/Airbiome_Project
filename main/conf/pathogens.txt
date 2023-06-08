@@ -1,0 +1,85 @@
+pathogens         
+Streptococcus pneumoniae
+Aspergillus fumigatus 
+human adenovirus C
+Salmonella enterica
+E.coli
+Shigella
+Staphylococcus aureus
+Campylobacter jejuni
+Klebsiella pneumoniae
+Listeria monocytogenes
+Streptococcus pneumoniae
+Enterococcus faecium
+Neisseria gonorrhoeae
+Pseudomonas aeruginosa
+Acinetobacter baumannii
+Clostridioides difficile
+Streptococcus pyogenes
+Vibrio parahaemolyticus
+Enterococcus faecalis
+Mycobacterium tuberculosis
+Vibrio cholerae
+Neisseria meningitidis
+Legionella pneumophila
+Enterobacter hormaechei	
+Bacillus cereus group
+Enterobacter cloacae
+Candida auris
+Staphylococcus pseudintermedius	
+Streptococcus agalactiae
+Streptococcus suis
+Citrobacter freundii
+Klebsiella oxytoca
+Burkholderia cepacia complex
+Serratia marcescens
+Stenotrophomonas maltophilia
+Providencia alcalifaciens
+Yersinia enterocolitica
+Clostridium perfringens
+Mannheimia haemolytica	
+Cronobacter
+Clostridium botulinum
+Listeria innocua
+Pasteurella multocida
+Vibrio vulnificus
+Streptococcus equi
+Elizabethkingia anophelis
+Pseudomonas putida
+Enterobacter asburiae
+Treponema pallidum	
+Enterobacter roggenkampii
+Morganella morganii
+Enterobacter kobei
+Corynebacterium striatum
+Aeromonas veronii
+Aeromonas hydrophila
+Aeromonas salmonicida
+Vibrio fluvialis
+Flavobacterium psychrophilum
+Enterobacter bugandensis
+Vibrio harveyi	
+Yersinia ruckeri
+Enterobacter ludwigii
+Vibrio metschnikovii
+Shewanella algae
+Photobacterium damselae	
+Streptococcus iniae
+Kluyvera_intermedia
+Neisseria lactamica
+Pluralibacter gergoviae	
+Enterobacter chengduensis
+Enterobacter mori
+Edwardsiella tarda
+Edwardsiella ictaluri
+Edwardsiella piscicida
+Enterobacter cancerogenus
+Aeromonas sobria
+Enterobacter sichuanensis
+Enterobacter chuandaensis
+Enterobacter soli
+Neisseria polysaccharea	
+Enterobacter oligotrophicus	
+Kosakonia oryzendophytica	
+Phytobacter massiliensis
+Kosakonia oryziphila             

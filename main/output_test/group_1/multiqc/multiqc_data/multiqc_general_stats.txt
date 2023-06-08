@@ -1,0 +1,10 @@
+Sample	FastQC / Falco (pre-Trimming)_mqc-generalstats-fastqc_falco_pre_trimming-total_sequences	FastQC / Falco (pre-Trimming)_mqc-generalstats-fastqc_falco_pre_trimming-avg_sequence_length	FastQC / Falco (pre-Trimming)_mqc-generalstats-fastqc_falco_pre_trimming-median_sequence_length	FastQC / Falco (pre-Trimming)_mqc-generalstats-fastqc_falco_pre_trimming-percent_duplicates	FastQC / Falco (pre-Trimming)_mqc-generalstats-fastqc_falco_pre_trimming-percent_gc	FastQC / Falco (pre-Trimming)_mqc-generalstats-fastqc_falco_pre_trimming-percent_fails	Kraken_mqc-generalstats-kraken-Aspergillus_chevalieri	Kraken_mqc-generalstats-kraken-Unclassified	Kraken_mqc-generalstats-kraken-Top_5	Bracken_mqc-generalstats-bracken-Aspergillus_chevalieri	Bracken_mqc-generalstats-bracken-Unclassified	Bracken_mqc-generalstats-bracken-Top_5
+1_SRR12170646_raw	2000000.0	207.327568	222	3.3757905968673185	58.0	18.181818181818183						
+1_se_SRR12170646_db1.bracken										4.22545	74.5947	6.98955
+1_se_SRR12170646_db2							4.22545	74.5947	6.98955			
+2_SRR12170657_raw	2000000.0	239.442612	251	0.4325924222200115	48.0	0.0						
+2_se_SRR12170657_db1.bracken										0.00455	96.54125	1.0453999999999999
+2_se_SRR12170657_db2							0.00455	96.54125	1.0453999999999999			
+3_SRR12170658_raw	2000000.0	235.802988	251	0.7129490383699988	47.0	0.0						
+3_se_SRR12170658_db1.bracken										0.013300000000000001	94.22975	0.96305
+3_se_SRR12170658_db2							0.013300000000000001	94.22975	0.96305			

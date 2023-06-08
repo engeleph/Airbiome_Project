@@ -1,0 +1,3 @@
+Sample	Paracoccus everestensis	Altererythrobacter sp. TH136	Kocuria rosea	Botrytis cinerea	Homo sapiens	Other	Unclassified
+4_se_SRR12170661_db1.bracken	11521.0	8504.0	8654.0	7064.0	4857.0	275288.0	1684112.0
+5_se_SRR12170668_db1.bracken	14299.0	10108.0	9785.0	4011.0	2023.0	354169.0	1605605.0

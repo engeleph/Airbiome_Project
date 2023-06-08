@@ -1,0 +1,4 @@
+Sample	Aspergillus chevalieri	Homo sapiens	Botrytis cinerea	Aspergillus nidulans	Aspergillus fumigatus	Other	Unclassified
+1_se_SRR12170646_db2	84509.0	18101.0	966.0	22632.0	13583.0	368315.0	1491894.0
+2_se_SRR12170657_db2	91.0	8065.0	12646.0	40.0	66.0	48267.0	1930825.0
+3_se_SRR12170658_db2	266.0	5757.0	13083.0	76.0	79.0	96144.0	1884595.0

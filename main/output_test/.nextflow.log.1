@@ -1,0 +1,104 @@
+May-09 08:52:00.331 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/taxprofiler --input sample_2.csv --databases database.csv --outdir output_test/group_2 -profile docker --run_kraken2 --max_memory '24 GB' --max_cpus 6
+May-09 08:52:00.365 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.10.1
+May-09 08:52:00.378 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/philipp/.nextflow/plugins; core-plugins: nf-amazon@1.11.0,nf-azure@0.14.2,nf-codecommit@0.1.2,nf-console@1.0.4,nf-ga4gh@1.0.4,nf-google@1.4.4,nf-tower@1.5.5,nf-wave@0.5.2
+May-09 08:52:00.386 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-09 08:52:00.386 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-09 08:52:00.388 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+May-09 08:52:00.394 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-09 08:52:00.403 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/philipp/.nextflow/scm
+May-09 08:52:01.155 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/philipp/.nextflow/assets/nf-core/taxprofiler/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/taxprofiler.git
+May-09 08:52:01.169 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+May-09 08:52:01.174 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/philipp/.nextflow/assets/nf-core/taxprofiler/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/taxprofiler.git
+May-09 08:52:02.357 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/philipp/.nextflow/assets/nf-core/taxprofiler/nextflow.config
+May-09 08:52:02.358 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/philipp/.nextflow/assets/nf-core/taxprofiler/nextflow.config
+May-09 08:52:02.365 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+May-09 08:52:03.526 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, ifb_core, denbi_qbic, alice, mjolnir_globe, uppmax, uge, rosalind_uge, test_nothing, lugh, unibe_ibu, vai, czbiohub_aws, jax, ccga_med, scw, tigem, tubingen_apg, google, ipop_up, googlels, eddie, medair, bi, bigpurple, sbc_sharc, adcra, cedars, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, test_motus, utd_ganymede, charliecloud, icr_davros, ceres, munin, arm, test_nopreprocessing, rosalind, hasta, cfc, uzh, ebc, ku_sund_dangpu, ccga_dx, crick, marvin, biohpc_gen, shifter, mana, mamba, wehi, awsbatch, imperial, maestro, genotoul, abims, janelia, nihbiowulf, nu_genomics, googlebatch, oist, sahmri, mpcdf, leicester, vsc_ugent, sage, cambridge, test_noprofiling, podman, cheaha, xanadu, test, computerome, seg_globe, sanger, dkfz, pasteur, test_full, azurebatch, hki, crukmi, docker, engaging, gis, psmn, eva, fgcz, conda, crg, singularity, prince, utd_sysbio, debug, genouest, cbe, phoenix, gitpod, seawulf, test_krakenuniq, uct_hpc, aws_tower, binac]
+May-09 08:52:03.551 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+May-09 08:52:03.551 [main] INFO  nextflow.cli.CmdRun - Launching `https://github.com/nf-core/taxprofiler` [distraught_morse] DSL2 - revision: c3f1adf09b [master]
+May-09 08:52:03.552 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-09 08:52:03.552 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+May-09 08:52:03.553 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /home/philipp/.nextflow/secrets/store.json
+May-09 08:52:03.555 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@57c6feea] - activable => nextflow.secret.LocalSecretsProvider@57c6feea
+May-09 08:52:03.598 [main] DEBUG nextflow.Session - Session UUID: 478aded0-4f71-4411-8130-ec3f6549d631
+May-09 08:52:03.598 [main] DEBUG nextflow.Session - Run name: distraught_morse
+May-09 08:52:03.598 [main] DEBUG nextflow.Session - Executor pool size: 8
+May-09 08:52:03.605 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+May-09 08:52:03.617 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.10.1 build 5828
+  Created: 27-10-2022 16:58 UTC (11:58 COST)
+  System: Linux 5.15.0-70-generic
+  Runtime: Groovy 3.0.13 on Java HotSpot(TM) 64-Bit Server VM 17.0.6+9-LTS-190
+  Encoding: UTF-8 (UTF-8)
+  Process: 151986@philippengeler [127.0.1.1]
+  CPUs: 8 - Mem: 31 GB (18.1 GB) - Swap: 8 GB (7.9 GB)
+May-09 08:52:03.628 [main] DEBUG nextflow.Session - Work-dir: /home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/output_test/work [ext2/ext3]
+May-09 08:52:03.637 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-09 08:52:03.652 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-09 08:52:03.790 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+May-09 08:52:03.796 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+May-09 08:52:03.870 [main] DEBUG nextflow.Session - Session start
+May-09 08:52:03.874 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/output_test/output_test/group_2/pipeline_info/execution_trace_2023-05-09_08-52-03.txt
+May-09 08:52:03.881 [main] DEBUG nextflow.Session - Using default localLib path: /home/philipp/.nextflow/assets/nf-core/taxprofiler/lib
+May-09 08:52:03.883 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/philipp/.nextflow/assets/nf-core/taxprofiler/lib
+May-09 08:52:03.884 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/philipp/.nextflow/assets/nf-core/taxprofiler/lib/nfcore_external_java_deps.jar
+May-09 08:52:04.520 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-09 08:52:04.551 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/taxprofiler v1.0.0-gc3f1adf[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrevision                   : [0;32mmaster[0m
+  [0;34mrunName                    : [0;32mdistraught_morse[0m
+  [0;34mcontainerEngine            : [0;32mdocker[0m
+  [0;34mlaunchDir                  : [0;32m/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/output_test[0m
+  [0;34mworkDir                    : [0;32m/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/output_test/work[0m
+  [0;34mprojectDir                 : [0;32m/home/philipp/.nextflow/assets/nf-core/taxprofiler[0m
+  [0;34muserName                   : [0;32mphilipp[0m
+  [0;34mprofile                    : [0;32mdocker[0m
+  [0;34mconfigFiles                : [0;32m/home/philipp/.nextflow/assets/nf-core/taxprofiler/nextflow.config[0m
+
+[1mInput/output options[0m
+  [0;34minput                      : [0;32msample_2.csv[0m
+  [0;34mdatabases                  : [0;32mdatabase.csv[0m
+  [0;34moutdir                     : [0;32moutput_test/group_2[0m
+
+[1mPreprocessing short-read QC options[0m
+  [0;34mshortread_qc_adapter1      : [0;32mnull[0m
+  [0;34mshortread_qc_adapter2      : [0;32mnull[0m
+  [0;34mshortread_qc_adapterlist   : [0;32mnull[0m
+
+[1mPreprocessing host removal options[0m
+  [0;34mhostremoval_reference      : [0;32mnull[0m
+  [0;34mshortread_hostremoval_index: [0;32mnull[0m
+  [0;34mlongread_hostremoval_index : [0;32mnull[0m
+
+[1mProfiling options[0m
+  [0;34mrun_kraken2                : [0;32mtrue[0m
+
+[1mPostprocessing and visualisation options[0m
+  [0;34mkrona_taxonomy_directory   : [0;32mnull[0m
+
+[1mMax job request options[0m
+  [0;34mmax_cpus                   : [0;32m6[0m
+  [0;34mmax_memory                 : [0;32m24 GB[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use nf-core/taxprofiler for your analysis please cite:
+
+* The pipeline
+  https://doi.org/10.5281/zenodo.7728364
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/taxprofiler/blob/master/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+May-09 08:52:04.943 [main] ERROR nextflow.cli.Launcher - Unable to read script: '/home/philipp/.nextflow/assets/nf-core/taxprofiler/./workflows/taxprofiler.nf' -- cause: /home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/output_test/sample_2.csv
