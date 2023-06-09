@@ -4,21 +4,23 @@ This reposatory contains the bioinformatics tools to analyse the Airbiome in Med
 The used workflows are using either [nextflow](https://www.nextflow.io/) with containers (Singularity, Docker,..) to ensure reproducibility.
 It also contains bash and pyton scripts which do not need more than a few preinstalled packages to run.
 ## Requirements
--Python v3 \
 -Nextflow version >= 20.10 but <=  22.10 \
 -Java v11+ \
--Singularity, Docker, Podman, Shifter or Charliecloud
+-Docker \
+Information: All the pipelines are run using Docker to ensure portability. Python, R and other software/packages are installed inside the docker image.,
 ## Documentation
 This project uses [nf-co.re/taxprofiler](https://nf-co.re/taxprofiler/1.0.0) for the reads preprocessing, taxonomic profiling and krona plots.  
 The taxonomic pipeline uses Nextflow. It can use a variety of different 
-containers such as Singularity, Docker, Podman, Shifter or Charliecloud. As an input it accepts single or 
+containers such as Singularity, Docker, Podman, Shifter or Charliecloud. We recommend to install docker as it is used for all the other parts as well. As an input it accepts single or 
 paired end fastq or even single end fasta files. The pipeline starts with adapter trimming and filtering. 
 It does then a taxonomic classification with kraken2 and/or MetaPhlAn3. It uses then the output to create krona plots. 
 For every step it can be chosen wheter it is made. For more detailed information, please click [here](https://nf-co.re/taxprofiler/1.0.0). \
-However, before we start with the analysis of the metagenomic samles we have to install a few python packages. All the necessay packages can be found in the script ```python_packages.sh```. These packages can be installed manually or simply by running:
+Important: Run the following command in the directroy main/.
+For that type:
 
 ```
-bash python_packages.sh
+git clone https://github.com/engeleph/Airbiome_Project
+cd main/
 ```
 
 Databeses necessary for kraken2 and metaphlan3 should be downloaded [here](https://benlangmead.github.io/aws-indexes/k2) and with the following command, respectively: 
@@ -41,6 +43,17 @@ Tip 2: You do not have to type NXF_VER=22.10.1 if your nextflow version is betwe
 Tip 3: Next to choosing the right sample_{NUMBER}.csv file you have to choose also the correct output directory!
 
 However, there are a great number of other possibilities, how to use nf-core/taxoprofiler. \
+At this part you should build a docker image for the followings parts. For this run:
+
+```
+docker build -f ../Dockerfile -t metagenomics_analysis .
+```
+After the docker image is built, open it with:
+
+```
+sudo docker run -ti -w="/main" --rm metagenomics_analysis /bin/bash
+```
+
 The script ```calculate_diversities.sh``` contains several parts and relies on python files in the directory modules. Explanations of possible configurations are further discribed in the configfile ```conf/config.py```.
 Firstly, it creates a counting table per group out of the bracken outputs. Next very low abundant OTUs can be filtered. For this a filter size and filter proportion can be chosen. The filter process can be easily described as all OTUs in one group are set to 0 when the average count is smaller or equal than the filter size and the the proportion of 0's is bigger than the filter proportion. The observed counts for these OTUs are viewed as false positive. To adjust for the potentially enormous differences between very highly abundant and very rare OTUs the OTU table is transformed. For that, the logarithmic transformation (log2(x+1)) is used. Configuration for these two steps can be specified in the config file. After finalizing the OTU table, it creates a file with different alpha diversity indices (shannon and simpson index). The desired alpha diversity index is used to create groupwise boxplots and compares this index between groups with the chosen test. After that, it calculates the beta diversity of the sample between groups. But not the beta diversity of samples in the same group. From the calculated beta diversity indeces, similar as for the alpha diversity, an index and a test can be specified in the config file.
 In order to run the whole diversity pipeline, type:
