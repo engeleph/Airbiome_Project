@@ -51,7 +51,7 @@ docker build -f ../Dockerfile -t metagenomics_analysis .
 After the docker image is built, open it with:
 
 ```
-sudo docker run -ti -w="/main" --rm metagenomics_analysis /bin/bash
+sudo docker run -v ./main:/main -ti -w="/main" --rm metagenomics_analysis /bin/bash
 ```
 
 The script ```calculate_diversities.sh``` contains several parts and relies on python files in the directory modules. Explanations of possible configurations are further discribed in the configfile ```conf/config.py```.
