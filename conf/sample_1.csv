@@ -1,4 +1,0 @@
-sample,run_accession,instrument_platform,fastq_1,fastq_2,fasta
-1,SRR12170646,ILLUMINA,/home/philipp/Downloads/SRR12170646.fastq.gz,,
-2,SRR12170657,ILLUMINA,/home/philipp/Downloads/SRR12170657.fastq.gz,,
-3,SRR12170658,ILLUMINA,/home/philipp/Downloads/SRR12170658.fastq.gz,,
