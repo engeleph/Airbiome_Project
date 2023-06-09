@@ -1,0 +1,2 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	40/5b2411	161380	NFCORE_TAXPROFILER:TAXPROFILER:INPUT_CHECK:SAMPLESHEET_CHECK (sample_2.csv)	FAILED	126	2023-05-09 09:11:18.095	45ms	11ms	-	-	-	-	-

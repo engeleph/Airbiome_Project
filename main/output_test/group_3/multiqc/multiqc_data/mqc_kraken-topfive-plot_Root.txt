@@ -1,0 +1,3 @@
+Sample	root	Unclassified
+6_se_SRR21153784_db2	640585.0	7197095.0
+7_se_SRR21154505_db2	860157.0	7825683.0

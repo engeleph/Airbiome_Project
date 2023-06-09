@@ -1,0 +1,10 @@
+Module	Section	Sample Name	Source
+FastQC / Falco (pre-Trimming)	all_sections	2_SRR12170657_raw	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/58/e71d58aa2ead0536f42bc1cbd50b6b/9/2_SRR12170657_raw_fastqc.zip
+FastQC / Falco (pre-Trimming)	all_sections	3_SRR12170658_raw	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/58/e71d58aa2ead0536f42bc1cbd50b6b/11/3_SRR12170658_raw_fastqc.zip
+FastQC / Falco (pre-Trimming)	all_sections	1_SRR12170646_raw	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/58/e71d58aa2ead0536f42bc1cbd50b6b/10/1_SRR12170646_raw_fastqc.zip
+Kraken	all_sections	3_se_SRR12170658_db2	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/58/e71d58aa2ead0536f42bc1cbd50b6b/5/3_se_SRR12170658_db2.kraken2.kraken2.report.txt
+Kraken	all_sections	2_se_SRR12170657_db2	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/58/e71d58aa2ead0536f42bc1cbd50b6b/3/2_se_SRR12170657_db2.kraken2.kraken2.report.txt
+Kraken	all_sections	1_se_SRR12170646_db2	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/58/e71d58aa2ead0536f42bc1cbd50b6b/6/1_se_SRR12170646_db2.kraken2.kraken2.report.txt
+Bracken	all_sections	3_se_SRR12170658_db1.bracken	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/58/e71d58aa2ead0536f42bc1cbd50b6b/8/3_se_SRR12170658_db1.bracken.kraken2.report.txt
+Bracken	all_sections	1_se_SRR12170646_db1.bracken	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/58/e71d58aa2ead0536f42bc1cbd50b6b/7/1_se_SRR12170646_db1.bracken.kraken2.report.txt
+Bracken	all_sections	2_se_SRR12170657_db1.bracken	/home/philipp/Documents/Airbiome_Project/taxprofiler/Airbiome_Project/work/58/e71d58aa2ead0536f42bc1cbd50b6b/4/2_se_SRR12170657_db1.bracken.kraken2.report.txt

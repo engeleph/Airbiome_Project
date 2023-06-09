@@ -1,0 +1,15 @@
+BRACKEN_BRACKEN:
+  bracken: '2.7'
+CUSTOM_DUMPSOFTWAREVERSIONS:
+  python: 3.10.6
+  yaml: '6.0'
+FASTQC:
+  fastqc: 0.11.9
+KRAKEN2_KRAKEN2:
+  kraken2: 2.1.2
+  pigz: '2.6'
+SAMPLESHEET_CHECK:
+  python: 3.8.3
+Workflow:
+  Nextflow: 22.10.1
+  nf-core/taxprofiler: 1.0.0
