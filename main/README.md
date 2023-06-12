@@ -78,4 +78,4 @@ bash calculate_CA.sh
 ```
 
 When the pipeline has finished, close the docker image with Ctrl+d. All the results will be mounted to the local directory!
-Now you can analyse the results ;)-v ./main:/main
+Now you can analyse the results ;)
