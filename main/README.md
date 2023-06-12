@@ -11,8 +11,7 @@ Information: All the pipelines are run using Docker to ensure portability. Pytho
 ## Documentation
 This project uses [nf-co.re/taxprofiler](https://nf-co.re/taxprofiler/1.0.0) for reads preprocessing (otional), which incluedes adapter trimming and host removal, and taxonomic profiling with kraken2. nf-co.re/taxoprofiler has many other options, which can be activated. However, they are for this project not needed and therefore, not further mentioned in this github repo. For more detailed information, please click [here](https://nf-co.re/taxprofiler/1.0.0).  
 This taxonomic pipeline uses Nextflow. It can use a variety of different containers such as Singularity, Docker, Podman, Shifter or Charliecloud. We recommend to install docker as it is used for all the other parts as well. As an input it accepts single or paired end fastq or even single end fasta files. Again, because the downstream analysis pipeline requires paired end reads, we recommend to used them instead of single end reads.\
-Important: Run the following command in the directroy main/.
-To clone the repo and change to the desired directory, type:
+To clone the repo and change to the main/ directory, type:
 
 ```
 git clone https://github.com/engeleph/Airbiome_Project
