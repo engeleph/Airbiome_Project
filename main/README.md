@@ -7,33 +7,29 @@ It also contains bash and pyton scripts which do not need more than a few preins
 -Nextflow version >= 20.10 but <=  22.10 \
 -Java v11+ \
 -Docker \
-Information: All the pipelines are run using Docker to ensure portability. Python, R and other software/packages are installed inside the docker image.,
+Information: All the pipelines are run using Docker to ensure portability. Python, R and other software/packages are installed inside the docker image.
 ## Documentation
-This project uses [nf-co.re/taxprofiler](https://nf-co.re/taxprofiler/1.0.0) for the reads preprocessing, taxonomic profiling and krona plots.  
-The taxonomic pipeline uses Nextflow. It can use a variety of different 
-containers such as Singularity, Docker, Podman, Shifter or Charliecloud. We recommend to install docker as it is used for all the other parts as well. As an input it accepts single or 
-paired end fastq or even single end fasta files. The pipeline starts with adapter trimming and filtering. 
-It does then a taxonomic classification with kraken2 and/or MetaPhlAn3. It uses then the output to create krona plots. 
-For every step it can be chosen wheter it is made. For more detailed information, please click [here](https://nf-co.re/taxprofiler/1.0.0). \
+This project uses [nf-co.re/taxprofiler](https://nf-co.re/taxprofiler/1.0.0) for reads preprocessing (otional), which incluedes adapter trimming and host removal, and taxonomic profiling with kraken2. nf-co.re/taxoprofiler has many other options, which can be activated. However, they are for this project not needed and therefore, not further mentioned in this github repo. For more detailed information, please click [here](https://nf-co.re/taxprofiler/1.0.0).  
+This taxonomic pipeline uses Nextflow. It can use a variety of different containers such as Singularity, Docker, Podman, Shifter or Charliecloud. We recommend to install docker as it is used for all the other parts as well. As an input it accepts single or paired end fastq or even single end fasta files. Again, because the downstream analysis pipeline requires paired end reads, we recommend to used them instead of single end reads.\
 Important: Run the following command in the directroy main/.
-For that type:
+To clone the repo and change to the desired directory, type:
 
 ```
 git clone https://github.com/engeleph/Airbiome_Project
 cd main/
 ```
 
-Databeses necessary for kraken2 and metaphlan3 should be downloaded [here](https://benlangmead.github.io/aws-indexes/k2) and with the following command, respectively: 
+A kraken2 databese necessary could be downloaded [here](https://benlangmead.github.io/aws-indexes/k2).However, if the computational resources allow it, it is highly recommended to build the Kraken Database by running the python scripts in the directory build_kraken_db in order. However, 1.2 TB of memory is needed for the full size or 550 GB for a smaller version! After running the python scripts you have to run:
 
 ```
-wget https://zenodo.org/record/4629921/files/metaphlan_databases.tar.gz 
-tar -xzf metaphlan_databases.tar.gz
+#command to build full size database
+kraken2  --build --db Kraken2_Database  
+
+#or for smaller database size
+kraken2  --build --db Kraken2_Database --size 500000000
 ```
-Tip: Different versions of metaphlan3 databases can also be downloaded [here](http://cmprod1.cibio.unitn.it/biobakery3/metaphlan_databases/)
 
-Important: If the computational resources allow it, it is highly recommended to build the Kraken Database by running the python scripts in the directory build_kraken_db in order. However, 1.2 TB of memory is needed!
-
-Before you can start using taxoprofiler change sample_{NUMBER}.csv and database.csv. Every group (month/PM size/ ...) needs an own sample_{NUMBER}.csv table! In order to do a txonomic profiling with kraken2 and metaphlan3 and produce krona plots, run the following command:
+Before you can start using taxoprofiler change sample_{NUMBER}.csv and database.csv. Every group (month/PM size/ ...) needs an own sample_{NUMBER}.csv table! In order to do a taxonomic profiling with kraken2, run the following command:
 
 ```
 NXF_VER=22.10.1 nextflow run nf-core/taxprofiler --input conf/sample_{NUMBER}.csv --databases conf/database.csv --outdir output_test/group_{NUMBER} -profile docker --run_kraken2 --run_bracken --max_memory '24 GB' --max_cpus 6
