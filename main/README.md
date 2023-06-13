@@ -22,10 +22,10 @@ A kraken2 databese necessary could be downloaded [here](https://benlangmead.gith
 
 ```
 #command to build full size database
-kraken2  --build --db Kraken2_Database  
+kraken2-build --build --db Kraken2_GTDB/  
 
 #or for smaller database size
-kraken2  --build --db Kraken2_Database --size 500000000
+kraken2-build --build --db Kraken2_GTDB/ --max-db-size 500000000000
 ```
 
 Before you can start using taxoprofiler change sample_{NUMBER}.csv and database.csv. Every group (month/PM size/ ...) needs an own sample_{NUMBER}.csv table! In order to do a taxonomic profiling with kraken2, run the following command:
