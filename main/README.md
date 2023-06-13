@@ -38,10 +38,12 @@ Tip 2: You do not have to type NXF_VER=22.10.1 if your nextflow version is betwe
 Tip 3: Next to choosing the right sample_{NUMBER}.csv file you have to choose also the correct output directory!
 
 However, there are a great number of other possibilities, how to use nf-core/taxoprofiler. \
-At this part you should build a docker image for the followings parts. For this run:
+At this part you should build a docker image for the followings parts. Move one folder back to the Dockerfile and build.
+For this run:
 
 ```
-docker build -f ../Dockerfile -t metagenomics_analysis .
+cd ..
+docker build -t metagenomics_analysis .
 ```
 After the docker image is built, open it with:
 
