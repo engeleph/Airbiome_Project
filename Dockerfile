@@ -21,16 +21,37 @@ RUN export DEBIAN_FRONTEND="noninteractive" && apt-get update && apt-get install
     python3-venv \
     vim \
     wget \
+    unzip \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install numpy
-RUN pip3 install pandas
-RUN pip3 install argparse
-RUN pip3 install scipy
-RUN pip3 install matplotlib
-RUN pip3 install seaborn
-RUN pip3 install statannot
-RUN pip3 install bokeh
+#RUN add-apt-repository -y ppa:mercurial-ppa/releases
+RUN python3 -m pip install mercurial --default-timeout=900
+
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive \
+    apt-get -y install default-jre-headless && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN apt-get install -y coreutils \
+    perl 
+
+RUN apt-get update -y \
+    && apt-get install -y python2.7.x \
+    && rm -rf /var/lib/apt/lists/*
+
+#RUN perl -MCPAN -e 'install XML::Simple'
+
+RUN pip3 install \
+    numpy \
+    pandas \
+    argparse \
+    scipy \
+    matplotlib \
+    seaborn \
+    statannot \
+    bokeh \
+    plotly 
 RUN python3 -m pip install -U plotly
 RUN pip3 install -U kaleido
 RUN pip3 install scikit-learn
