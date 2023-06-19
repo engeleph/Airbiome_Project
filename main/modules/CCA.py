@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cross_decomposition import CCA
@@ -25,24 +26,48 @@ for group in range(1,number_groups):
     index=index+number_samples
 df["dummy"]=0
 df["dummy"].iloc[5:]=10
+df["dummy"].iloc[7]=3
+df["dummy"].iloc[2]=33
+df["dummy2"]=1000
+df["dummy2"].iloc[8:]=-10
+df["dummy2"].iloc[2]=103
+df["dummy2"].iloc[5]=1
+df["dummy2"].iloc[7]=0
+
 
 # Split the data in X and Y
 X = df[otu]
-Y = df[["group","dummy"]]
+#print(X)
+Y = df[["group","dummy","dummy2"]]
 
 # Instantiate the Canonical Correlation Analysis with 2 components
 my_cca = CCA(n_components=2)
 
 # Fit the model
 my_cca.fit(X, Y)
+x,y=my_cca.transform(X,Y)
+
+print(x)
+print(y)
 
 # Obtain the rotation matrices
-xrot = my_cca.x_rotations_
-yrot = my_cca.y_rotations_
+#xrot = my_cca.x_rotations_
+#yrot = my_cca.y_rotations_
 
 # Put them together in a numpy matrix
-xyrot = np.vstack((xrot,yrot))
+#xyrot = np.vstack((xrot,yrot))
 
+dataframe = pd.DataFrame({"x_1":x[:,0],"x_2":x[:,1],"y_1":y[:,0],"y_2":y[:,1]})
+
+#sns.set_context("talk", font_scale=1.2)
+plt.figure(figsize=(10,8))
+plt.scatter(x="x_2",y="y_2",data=dataframe)
+plt.title("Test")
+#plt.title('Comp. 1, corr = %.2f' %
+#         np.corrcoef(X_c[:, 0], Y_c[:, 0])[0, 1])
+#plt.show()
+plt.savefig('output_analysis/batch_effect/CCA.png')
+'''
 nvariables = xyrot.shape[0]
 
 plt.figure(figsize=(15, 15))
@@ -55,7 +80,8 @@ for var_i in range(nvariables):
     y = xyrot[var_i,1]
 
     plt.arrow(0,0,x,y)
-    #plt.text(x,y,df.columns[i], color='red' if i >= 6 else 'blue')
+    plt.text(x,y, color='red')
 
-plt.show()
-
+#plt.show()
+plt.savefig('output_analysis/batch_effect/CCA.png')
+'''
