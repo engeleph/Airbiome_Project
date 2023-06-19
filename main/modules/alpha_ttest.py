@@ -46,6 +46,7 @@ y=alpha_index
 #create seaborn boxplot with statistics
 ax = sns.boxplot(data=df, x=x, y=y, order=order)
 add_stat_annotation(ax, data=df, x=x, y=y, order=order, box_pairs=pairs, test=alpha_test, text_format='star', loc='outside', verbose=2)  #test='Mann-Whitney'
+plt.title("{} indices compared with {}".format(alpha_index,alpha_test))
 plt.legend(loc='upper left', bbox_to_anchor=(1.03, 1))
 plt.ylabel("{} index".format(alpha_index))
 plt.axis('tight')
