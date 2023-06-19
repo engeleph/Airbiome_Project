@@ -86,7 +86,7 @@ For the downstream analysis you have to move to the directrory Metagenomics_anal
 cd Metagenomics_analysis/
 
 ```
-There, run first the script ```prepare_databases.sh```. It creates all the necessary databases for this part, such as humann2, megan, kraken, etc. Be aware that these databases need a lot of memory (~200 GB)!
+There, run first the script ```prepare_databases.sh```. It creates all the necessary databases for this part, such as humann2, megan, kraken, etc. Be aware that these databases need a lot of memory (~160 GB)!
 
 ```
 bash prepare_databases.sh
