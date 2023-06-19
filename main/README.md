@@ -79,5 +79,23 @@ In order to run the whole pipeline, type:
 bash calculate_CA.sh
 ```
 
+For the downstream analysis you have to move to the directrory Metagenomics_analysis/.
+
+```
+
+cd Metagenomics_analysis/
+
+```
+There, run first the script ```prepare_databases.sh```. It creates all the necessary databases for this part, such as humann2, megan, kraken, etc. Be aware that these databases need a lot of memory (~200 GB)!
+
+```
+bash prepare_databases.sh
+```
+After the script has finished you can run the main script ```metagenomics_analysis.sh```. This main script calls ceveral other script in this directory (run_*.sh). This multy step script starts with quality control of the reads and then continues with assembly, functional classification, comparative analysis and many more. In order to get mor detailed information about this downstream anylsis or in case of uncertainties click [here](https://github.com/grimmlab/MicrobiomeBestPracticeReview).
+
+```
+bash metagenomics_analysis.sh
+```
+
 When the pipeline has finished, close the docker image with Ctrl+d. All the results will be mounted to the local directory!
 Now you can analyse the results ;)
